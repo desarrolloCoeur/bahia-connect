@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div id="home" className="relative h-[100vh] w-full">
       <Image
-        className="h-[100vh] w-full object-cover select-none brightness-80"
+        className="h-[100vh] w-full object-cover select-none brightness-60"
         src="/assets/hero-1.jpg"
         alt="hero-img"
         width={1920}

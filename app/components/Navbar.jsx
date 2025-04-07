@@ -1,5 +1,5 @@
 "use client";
-import { DollarSign, Mail, Phone } from "lucide-react";
+import { Cross, DollarSign, Mail, Phone, X } from "lucide-react";
 import { Madimi_One } from "next/font/google";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -42,25 +42,38 @@ const Navbar = () => {
         <div className="w-[80%] flex justify-between max-md:w-[90%]">
           <div>
             <div className="overflow-hidden w-[170px] h-[110px] py-[5px]">
-              <Image
-                className="object-cover select-none overflow-hidden"
-                src="/assets/logo-navbar.png"
-                alt="hero-logo"
-                width={800}
-                height={800}
-              />
+              <a href="/">
+                <Image
+                  className="object-cover select-none overflow-hidden"
+                  src="/assets/logo-navbar2.png"
+                  alt="hero-logo"
+                  width={800}
+                  height={800}
+                />
+              </a>
             </div>
           </div>
           <div className="flex">
-            <div className="flex gap-5 py-[48px] text-sm text-white max-md:hidden">
-              <p>HOME</p>
-              <p>NOSOTROS</p>
-              <p>CONSULTORIA</p>
-              <p>SERVICIOS</p>
-              <p>CONTACTO</p>
+            <div className="flex gap-5 py-[48px] text-sm text-white max-md:hidden uppercase">
+              <a href="/">
+                <p>inicio</p>
+              </a>
+              <a href="/consultoria">
+                <p>Consultoría</p>
+              </a>
+              <a href="/services">
+                <p>SERVICIOS</p>
+              </a>
+              <a href="/about">
+                <p>NOSOTROS</p>
+              </a>
+
+              <a href="/contact">
+                <p>CONTACTO</p>
+              </a>
             </div>
             <button
-              className="hidden relative z-30 flex-col justify-center items-center w-10 h-30 group max-md:flex"
+              className="hidden relative z-30 flex-col justify-center items-center w-10 h-30 group max-md:flex cursor-pointer"
               onClick={handleMenu}
               aria-label="Toggle menu"
             >
@@ -86,20 +99,22 @@ const Navbar = () => {
 
       {/* Scroll-activated navbar */}
       <div
-        className={`fixed h-[90px] bg-sky-900 w-full transition-transform duration-300 ease-in-out flex justify-between items-center z-20 px-[5%] md:px-[10%] ${
+        className={`fixed h-[90px] bg-sky-950 w-full transition-transform duration-300 ease-in-out flex justify-between items-center z-20 px-[5%] md:px-[10%] ${
           isScrolled ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <Image
-          className="object-cover select-none"
-          src="/assets/logo-navbar2.png"
-          alt="navbar-logo"
-          width={120}
-          height={120}
-        />
+        <a href="/">
+          <Image
+            className="object-cover select-none"
+            src="/assets/logo-navbar2.png"
+            alt="navbar-logo"
+            width={120}
+            height={120}
+          />
+        </a>
 
         <button
-          className="relative z-30 flex flex-col justify-center items-center w-10 h-10 group"
+          className="relative z-30 flex flex-col justify-center items-center w-10 h-10 group cursor-pointer"
           onClick={handleMenu}
           aria-label="Toggle menu"
         >
@@ -124,9 +139,17 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div
         id="menu"
-        className="fixed uppercase text-lg p-10 h-[100vh] w-[400px] max-sm:w-[300px] top-[90px] right-[-600px] bg-sky-800 transition-all duration-200 ease-in-out text-right z-40
+        className="fixed uppercase text-lg p-10 h-[100vh] w-[400px] max-sm:w-[300px] right-[-600px] bg-sky-800 transition-all duration-200 ease-in-out text-right z-40
         text-sky-100"
       >
+        <div className="flex justify-center cursor-pointer">
+          <X
+            onClick={() => {
+              handleMenu();
+            }}
+            className="h-10 w-10"
+          />
+        </div>
         <div className="text-left text-md py-5 border-b-1">
           <div className="flex mb-5">
             <div className="flex-shrink-0">
@@ -152,27 +175,18 @@ const Navbar = () => {
             inicio
           </div>
         </a>
-        <a href="/">
+
+        <a href="/consultoria">
           <div
             onClick={() => {
               handleMenu();
             }}
             className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
           >
-            nosotros
+            Consultoría
           </div>
         </a>
-        <a href="/">
-          <div
-            onClick={() => {
-              handleMenu();
-            }}
-            className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
-          >
-            consultoria
-          </div>
-        </a>
-        <a href="/">
+        <a href="/services">
           <div
             onClick={() => {
               handleMenu();
@@ -182,7 +196,17 @@ const Navbar = () => {
             servicios
           </div>
         </a>
-        <a href="/">
+        <a href="/about">
+          <div
+            onClick={() => {
+              handleMenu();
+            }}
+            className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
+          >
+            nosotros
+          </div>
+        </a>
+        <a href="/contact">
           <div
             onClick={() => {
               handleMenu();
@@ -191,7 +215,7 @@ const Navbar = () => {
           >
             contacto
           </div>
-        </a>        
+        </a>
       </div>
     </div>
   );

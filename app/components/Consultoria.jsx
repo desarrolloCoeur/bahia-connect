@@ -13,15 +13,11 @@ const Consultoria = () => {
         />
       <div className="w-[80%] z-[1] max-md:w-[90%]">
         
-        <div className="flex flex-col items-center justify-center space-y-4 text-center my-[200px]">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center my-[100px]">
           <h2 className="text-5xl uppercase tracking-tighter sm:text-6xl md:text-8xl text-sky-200">
             Consultoría 360°
           </h2>
-          <p className="max-w-[700px] text-gray-50 md:text-xl/relaxed lg:text-xl/relaxed">
-            Evaluación integral para la mejora continua y sostenibilidad de su
-            condominio.
-            <br />
-            <br />
+          <p className="max-w-[750px] text-gray-50 md:text-xl/relaxed lg:text-xl/relaxed">            
             En esta consultoría se presentan recomendaciones fundamentadas en
             los hallazgos obtenidos, con el objetivo de mejorar y ajustar el
             Plan de Operación y Mantenimiento vigente, garantizando la

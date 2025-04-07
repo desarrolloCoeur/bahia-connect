@@ -17,17 +17,25 @@ const About = () => {
       </div>
 
       {/* Content container - full width on mobile, 50% on desktop */}
-      <div className="w-full lg:w-1/2 bg-sky-100 py-10 lg:py-0 lg:relative">
+      <div className="w-full lg:w-1/2 bg-black py-10 lg:py-0 lg:relative">
         <div className="px-6 md:px-10 lg:absolute lg:top-1/2 lg:transform lg:-translate-y-1/2 lg:pl-[10%] lg:pr-[20%] lg:px-0">
-          <h1 className="uppercase text-2xl md:text-3xl text-sky-950">Sobre Nosotros</h1>
-          <p className="text-base md:text-lg font-light uppercase py-5 md:py-9 text-sky-800">
-            Evaluación integral para la mejora continua y sostenibilidad de su condominio.
+          <h1 className="uppercase text-2xl md:text-3xl text-sky-50 pb-10 text-center md:text-left">
+            Sobre Nosotros
+          </h1>
+          <p className="text-gray-100 text-base md:text-lg text-center md:text-left">
+            Somos una empresa de administración de propiedades, gestión de
+            condominios y consultoría. Contamos con más de 18 años de
+            experiencia en la administración y operación de propiedades en Punta
+            Mita y más de 15 años de experiencia en rentas vacacionales,
+            administración y mantenimiento de propiedades residenciales.
           </p>
-          <p className="text-gray-600 text-base md:text-lg">
-            Somos una empresa de administración de propiedades, gestión de condominios y consultoría. Contamos con más
-            de 18 años de experiencia en la administración y operación de propiedades en Punta Mita y más de 15 años de
-            experiencia en rentas vacacionales, administración y mantenimiento de propiedades residenciales.
-          </p>
+          <div className="flex justify-center md:justify-start">
+            <a href="/about">
+              <div className="p-3 border-1 border-white text-white mt-9 hover:bg-sky-900">
+                Ver Más
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>

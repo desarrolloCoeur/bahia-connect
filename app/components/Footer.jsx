@@ -1,11 +1,11 @@
-import { Mail, Phone } from 'lucide-react'
-import Image from 'next/image'
-import React from 'react'
+import { Mail, Phone } from "lucide-react";
+import Image from "next/image";
+import React from "react";
 
 const Footer = () => {
   return (
-    <div className='w-full flex justify-center bg-sky-800 text-sky-300'>
-        <div className='w-[80%]'>
+    <div className="w-full flex justify-center bg-sky-950 text-sky-300">
+      <div className="w-[80%]">
         <div className="flex justify-between py-[20px]">
           <Image
             src="/assets/logo-white.png"
@@ -16,17 +16,17 @@ const Footer = () => {
           />
           <div className="w-[50%]">
             <h2 className="text-lg font-bold text-sky-200">Navegación</h2>
-            <a href="/#home">
+            <a href="/">
               <p>Inicio</p>
             </a>
-            <a href="/#about">
+            <a href="/consultoria">
+              <p>Consultoría</p>
+            </a>
+            <a href="/services">
+              <p>Servicios</p>
+            </a>
+            <a href="/about">
               <p>Nosotros</p>
-            </a>
-            <a href="#">
-              <p>Colección</p>
-            </a>
-            <a href="#">
-              <p>Proyectos</p>
             </a>
             <a href="/contact">
               <p>Contacto</p>
@@ -34,20 +34,20 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full  text-xs ">
-        <div className="text-left text-md flex py-2">
-          <div className="flex mr-5">
-            <div className="flex-shrink-0">
-              <Phone className="h-4 w-4 mr-2" />
+          <div className="text-left text-md flex py-2">
+            <div className="flex mr-5">
+              <div className="flex-shrink-0">
+                <Phone className="h-4 w-4 mr-2" />
+              </div>
+              <p className="text-md">(+52) 329 688 5505</p>
             </div>
-            <p className="text-md">(+52) 329 688 5505</p>
-          </div>
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <Mail className="h-4 w-4 mr-2" />
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <Mail className="h-4 w-4 mr-2" />
+              </div>
+              <p className="lowercase">info@bahiaconnect.com</p>
             </div>
-            <p className="lowercase">info@bahiaconnect.com</p>
           </div>
-        </div>
           <div className="flex pb-2">
             <a href="/contact">
               <p className="mr-4">Contacto</p>
@@ -59,14 +59,15 @@ const Footer = () => {
               <p>Instagram</p>
             </a>
           </div>
-          <div className='py-[30px] border-t-[1px]'>
-          <p>Copyright © 2025. Todos los derechos reservados. Bahia Connect</p>
+          <div className="py-[30px] border-t-[1px]">
+            <p>
+              Copyright © 2025. Todos los derechos reservados. Bahia Connect
+            </p>
           </div>
         </div>
-        </div>
-      
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -81,15 +81,15 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full flex justify-center py-12 bg-sky-50">
-      <div className="w-[70%] max-md:w-full flex flex-col lg:flex-row">
+    <div className="w-full flex justify-center bg-sky-50">
+      <div className="w-full max-md:w-full flex flex-col lg:flex-row">
         {/* Form Section */}
-        <div className="w-full lg:w-1/2  p-6 md:p-8">
-          <form onSubmit={handleSubmit} className="w-full text-black">
-            <h1 className="text-3xl md:text-4xl text-sky-900 font-medium">
+        <div className="flex justify-center w-full lg:w-1/2  p-6 md:p-8">
+          <form onSubmit={handleSubmit} className="w-full md:w-2/3 text-black">
+            <h1 className="text-3xl md:text-4xl text-sky-900 uppercase ">
               Déjanos tu información
             </h1>
-            <h2 className="text-lg md:text-xl py-3 md:py-5 text-sky-800">
+            <h2 className="text-lg md:text-xl py-3 md:py-5 text-sky-800 ">
               Nos pondremos en contacto contigo
             </h2>
 
@@ -145,7 +145,6 @@ const Contact = () => {
 
         {/* Map Section */}
         <div className="w-full lg:w-1/2 h-[300px] md:h-[400px] lg:h-auto">
-
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.310630830032!2d-105.29883765553248!3d20.697606999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842146a4987d0337%3A0xb93b92efcc8dd4f5!2sCentro%20Empresarial%20Nuevo%20Vallarta!5e0!3m2!1ses-419!2smx!4v1743791388740!5m2!1ses-419!2smx"
             className="w-full h-full border-0"
