@@ -45,7 +45,7 @@ const page = () => {
       </div>
       {/* body */}
       <div className="w-full flex justify-center">
-        <div className="w-full md:w-2/3 p-6 md:p-8 my-2">
+        <div className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
           <h1 className="uppercase text-4xl md:text-5xl font-light">
             Objetivo
           </h1>
@@ -61,7 +61,7 @@ const page = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="w-full md:w-2/3 p-6 md:p-8 my-2">
+        <div className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
           <h2 className="mb-4 text-4xl font-light">Nuestro Proceso</h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div>
@@ -144,7 +144,7 @@ const page = () => {
       </div>
       {/* documentos requeridos */}
       <div className="flex justify-center w-full font-light">
-        <section className="w-full md:w-2/3 p-6 md:p-8 my-12">
+        <section className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
           <h2 className="mb-8 text-4xl font-light">Documentos Requeridos</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className=" ">

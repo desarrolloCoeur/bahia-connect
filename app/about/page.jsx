@@ -51,7 +51,7 @@ const page = () => {
 
       <div className="py-20">
         <div className="w-full flex justify-center">
-          <div className="w-full md:w-2/3 p-6 md:p-8">
+          <div className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
             <h1 className="uppercase text-4xl md:text-5xl font-light">
               visión
             </h1>
@@ -73,7 +73,7 @@ const page = () => {
           </div>
         </div>
         <div className="w-full flex justify-center gap-10">
-          <div className="w-full md:w-2/3 p-6 md:p-8">
+          <div className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
             <h1 className="uppercase text-4xl md:text-5xl font-light">
               Objetivo
             </h1>

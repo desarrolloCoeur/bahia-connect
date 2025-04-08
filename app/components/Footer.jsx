@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-full flex justify-center bg-sky-950 text-sky-300">
+    <div className="w-full flex justify-center bg-sky-950 text-sky-50">
       <div className="w-[80%]">
         <div className="flex justify-between py-[20px]">
           <Image
@@ -15,7 +15,7 @@ const Footer = () => {
             height={370}
           />
           <div className="w-[50%]">
-            <h2 className="text-lg font-bold text-sky-200">Navegación</h2>
+            <h2 className="text-lg font-bold text-sky-50">Navegación</h2>
             <a href="/">
               <p>Inicio</p>
             </a>

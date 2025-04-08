@@ -14,7 +14,7 @@ const Consultoria = () => {
       <div className="w-[80%] z-[1] max-md:w-[90%]">
         
         <div className="flex flex-col items-center justify-center space-y-4 text-center my-[100px]">
-          <h2 className="text-5xl uppercase tracking-tighter sm:text-6xl md:text-8xl text-sky-200">
+          <h2 className="text-5xl uppercase tracking-tighter sm:text-6xl md:text-8xl text-sky-50">
             Consultoría 360°
           </h2>
           <p className="max-w-[750px] text-gray-50 md:text-xl/relaxed lg:text-xl/relaxed">            
