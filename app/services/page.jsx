@@ -9,7 +9,7 @@ const page = () => {
       <div className="relative h-[40vh] w-full">
         <Image
           className="h-full w-full object-cover select-none brightness-40"
-          src="/assets/image5.jpg"
+          src="/assets/image2.jpg"
           alt="services image 1"
           width={1920}
           height={1080}
@@ -21,7 +21,7 @@ const page = () => {
           <h1 className="uppercase">servicios</h1>
         </div>
       </div>
-      <div className="flex justify-center bg-black">
+      <div className="flex justify-center bg-sky-900">
         <div className="w-[90%] md:w-[80%] lg:w-[60%]">
           <div className="py-[100px] text-xl">
             <div className="flex flex-col md:flex-row items-center gap-8">
@@ -44,7 +44,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="py-20">
         <div className="p-4 max-w-6xl mx-auto w-[90%] md:w-[80%] lg:w-[60%]">
           <div className="mb-10">
             <h2 className="text-4xl font-light mb-4">
@@ -143,17 +143,17 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full flex justify-center bg-black py-20">
-        <Image
+      <div className="relative w-full flex justify-center bg-sky-800 py-20">
+        {/* <Image
           className="absolute top-0 left-0 h-full w-full object-cover select-none brightness-25 z-[0]"
-          src="/assets/image5.jpg"
+          src="/assets/image4.jpg"
           alt="about-relleno"
           width={1920}
           height={900}
-        />
+        /> */}
         <div className="relative w-[80%] md:w-[60%] text-center">
           <p className="text-sky-50 font-light text-4xl mb-8">
-            Nuestra prioridad es optimizar la gestión de su condominio.
+            Gestión inmobiliaria inteligente para tu condominio
           </p>
           <button className="cursor-pointer px-6 py-2 border border-sky-50 text-sky-50 uppercase hover:bg-sky-800 hover:text-white transition-colors">
             Solicitar información

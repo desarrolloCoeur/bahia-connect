@@ -9,7 +9,7 @@ const page = () => {
       <div className="relative h-[40vh] w-full">
         <Image
           className="h-full w-full object-cover select-none brightness-40"
-          src="/assets/image2.jpg"
+          src="/assets/image.jpg"
           alt="hero-img"
           width={1920}
           height={1080}
@@ -21,7 +21,7 @@ const page = () => {
           <h1 className="uppercase">Consultoría</h1>
         </div>
       </div>
-      <div className="flex justify-center bg-black">
+      <div className="flex justify-center bg-sky-900">
         <div className="w-[90%] md:w-[80%] lg:w-[60%]">
           <div className="py-[100px] text-xl">
             <div className="flex flex-col md:flex-row items-center gap-8">
@@ -33,9 +33,12 @@ const page = () => {
               <div className="w-full md:w-1/2  text-left">
                 <div className="p-5 text-xl text-sky-100 font-light">
                   <p>
-                    Evaluación integral del programa de mantenimiento, operación
-                    e infraestructura de las áreas comunes de su condominio para
-                    garantizar la sostenibilidad a largo plazo.
+                    Nuestra consultoría 360° te ofrece una revisión completa del
+                    estado actual de tu propiedad o desarrollo. Con base en un
+                    análisis profundo, te damos recomendaciones claras y
+                    accionables para mejorar el plan de operación y
+                    mantenimiento. El objetivo es ayudarte a hacer tu proyecto
+                    más eficiente, rentable y sostenible a largo plazo.
                   </p>
                 </div>
               </div>
@@ -44,9 +47,9 @@ const page = () => {
         </div>
       </div>
       {/* body */}
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center my-15">
         <div className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
-          <h1 className="uppercase text-4xl md:text-5xl font-light">
+          <h1 className="uppercase text-4xl md:text-5xl font-light mb-10">
             Objetivo
           </h1>
           <p className="font-light text-gray-900">
@@ -61,7 +64,7 @@ const page = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
+        <div className="w-[90%] md:w-[80%] lg:w-[60%] p-4 mt-2 mb-10">
           <h2 className="mb-4 text-4xl font-light">Nuestro Proceso</h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div>
@@ -143,7 +146,7 @@ const page = () => {
         </div>
       </div>
       {/* documentos requeridos */}
-      <div className="flex justify-center w-full font-light">
+      <div className="flex justify-center w-full font-light my-20">
         <section className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
           <h2 className="mb-8 text-4xl font-light">Documentos Requeridos</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -223,7 +226,7 @@ const page = () => {
           </button>
         </div>
       </div>
-      <Contact/>
+      <Contact />
     </div>
   );
 };

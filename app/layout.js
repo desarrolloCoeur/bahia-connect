@@ -3,6 +3,7 @@ import "./globals.css";
 // import "./general-sans.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhastappButton from "./components/WhastappButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <Navbar/>
         {children}
         <Footer/>
+        <WhastappButton/>
       </body>
     </html>
   );

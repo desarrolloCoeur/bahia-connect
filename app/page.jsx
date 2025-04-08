@@ -24,7 +24,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center my-[100px]">
             <Image
               className="object-cover select-none overflow-hidden w-[350px]"
-              src="/assets/logo-navbar.png"
+              src="/assets/logo-navbar2.png"
               alt="hero-logo"
               width={800}
               height={800}
@@ -32,10 +32,10 @@ export default function Home() {
             {/* <h2 className="text-xl uppercase tracking-tighter sm:text-4xl md:text-4xl text-sky-200">
               Cuidamos cada detalle para que tú solo disfrutes.
             </h2> */}
-            <p className="max-w-[700px] text-gray-50 md:text-xl/relaxed lg:text-xl/relaxed">
+            <p className="max-w-[700px] text-gray-50 md:text-xl/relaxed lg:text-2xl/relaxed font-light">
               Nos encargamos del mantenimiento, seguridad y administración de tu
-              propiedad para que tú solo te preocupes por lo importante: vivir o
-              invertir con tranquilidad.
+              propiedad para que tú solo te preocupes por lo importante: <span className="italic font-normal">vivir o
+              invertir con tranquilidad.</span>
             </p>
           </div>
         </div>

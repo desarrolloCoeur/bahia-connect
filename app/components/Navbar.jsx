@@ -55,9 +55,6 @@ const Navbar = () => {
           </div>
           <div className="flex">
             <div className="flex gap-5 py-[48px] text-sm text-white max-md:hidden uppercase">
-              <a href="/">
-                <p>inicio</p>
-              </a>
               <a href="/consultoria">
                 <p>Consultoría</p>
               </a>
