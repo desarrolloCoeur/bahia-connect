@@ -96,7 +96,7 @@ const Navbar = () => {
 
       {/* Scroll-activated navbar */}
       <div
-        className={`fixed h-[90px] bg-sky-950 w-full transition-transform duration-300 ease-in-out flex justify-between items-center z-20 px-[5%] md:px-[10%] ${
+        className={`fixed h-[90px] bg-sky-800 w-full transition-transform duration-300 ease-in-out flex justify-between items-center z-20 px-[5%] md:px-[10%] ${
           isScrolled ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -136,7 +136,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div
         id="menu"
-        className="fixed uppercase text-lg p-10 h-[100vh] w-[400px] max-sm:w-[300px] right-[-600px] bg-sky-800 transition-all duration-200 ease-in-out text-right z-40
+        className="fixed uppercase text-lg p-10 h-[100vh] w-[400px] max-sm:w-[300px] right-[-600px] bg-sky-700 transition-all duration-200 ease-in-out text-right z-40
         text-sky-100"
       >
         <div className="flex justify-center cursor-pointer">

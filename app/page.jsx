@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -6,9 +9,71 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 
 export default function Home() {
+  const [years, setYears] = useState(0);
+  const [tons, setTons] = useState(0);
+  const [clients, setClients] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true); // Prevents re-triggering
+
+          let yearsCount = 0;
+          let tonsCount = 0;
+          let clientsCount = 0;
+
+          const interval = setInterval(() => {
+            setYears((prev) => (prev < 18 ? prev + 1 : 18));
+            setTons((prev) => (prev < 100 ? prev + 5 : 100));
+            setClients((prev) => (prev < 40 ? prev + 2 : 40));
+
+            yearsCount += 2;
+            tonsCount += 1200;
+            clientsCount += 8;
+
+            if (yearsCount >= 50 && tonsCount >= 30000 && clientsCount >= 200) {
+              clearInterval(interval);
+            }
+          }, 50);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [hasAnimated]); // Ensures animation runs only once
+
   return (
     <div>
       <Hero />
+      <div ref={ref} className="bg-sky-800 flex justify-center">
+        <div
+          className=" grid grid-cols-3 grid-rows-auto gap-5 w-[80%] 
+        max-lg:w-[80%]  text-white text-center py-11 max-md:grid-cols-1"
+        >
+          <div className="max-lg:py-5">
+            <h1 className=" text-6xl max-lg:text-4xl">{years}</h1>
+            <p className="text-2xl">Años de Experiencia</p>
+          </div>
+          <div className="max-lg:py-5">
+            <h1 className=" text-6xl max-lg:text-4xl">
+              +{tons.toLocaleString()}
+            </h1>
+            <p className="text-2xl">Proyectos</p>
+          </div>
+          <div className="max-lg:py-5">
+            <h1 className=" text-6xl max-lg:text-4xl">
+              +{clients}
+            </h1>
+            <p className="text-2xl">Clientes</p>
+          </div>
+        </div>
+      </div>
       <About />
       <Consultoria />
       <Services />
@@ -34,8 +99,10 @@ export default function Home() {
             </h2> */}
             <p className="max-w-[700px] text-gray-50 md:text-xl/relaxed lg:text-2xl/relaxed font-light">
               Nos encargamos del mantenimiento, seguridad y administración de tu
-              propiedad para que tú solo te preocupes por lo importante: <span className="italic font-normal">vivir o
-              invertir con tranquilidad.</span>
+              propiedad para que tú solo te preocupes por lo importante:{" "}
+              <span className="italic font-normal">
+                vivir o invertir con tranquilidad.
+              </span>
             </p>
           </div>
         </div>
