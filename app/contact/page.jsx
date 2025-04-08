@@ -88,8 +88,8 @@ const page = () => {
           className="h-full w-full object-cover select-none brightness-40"
           src="/assets/image6.jpg"
           alt="hero-img"
-          width={1920}
-          height={1080}
+          width={1400}
+          height={900}
         />
 
         <div className="absolute text-white bottom-[20%] left-[5%]  md:left-[20%] flex text-xl md:text-2xl font-light">
@@ -105,7 +105,9 @@ const page = () => {
            bg-[#ffffff] z-[1] max-md:w-[95%] font-light"
           >
             <form onSubmit={handleSubmit} className="w-full text-black ">
-              <h1 className=" text-4xl text-black uppercase">Déjanos tu información</h1>
+              <h1 className=" text-4xl text-black uppercase">
+                Déjanos tu información
+              </h1>
               <h2 className="text-xl py-5 text-gray-600">
                 Nos pondremos en contacto contigo
               </h2>

@@ -11,8 +11,8 @@ const page = () => {
           className="h-full w-full object-cover select-none brightness-40"
           src="/assets/image2.jpg"
           alt="services image 1"
-          width={1920}
-          height={1080}
+          width={1400}
+          height={900}
         />
 
         <div className="absolute text-white bottom-[20%] left-[5%]  md:left-[20%] flex text-xl md:text-2xl font-light">
