@@ -64,7 +64,9 @@ const Navbar = () => {
               <a href="/about">
                 <p>NOSOTROS</p>
               </a>
-
+              <a href="/blogs">
+                <p>BLOGS</p>
+              </a>
               <a href="/contact">
                 <p>CONTACTO</p>
               </a>
@@ -201,6 +203,16 @@ const Navbar = () => {
             className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
           >
             nosotros
+          </div>
+        </a>
+        <a href="/blogs">
+          <div
+            onClick={() => {
+              handleMenu();
+            }}
+            className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
+          >
+            Blogs
           </div>
         </a>
         <a href="/contact">

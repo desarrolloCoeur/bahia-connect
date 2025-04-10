@@ -12,7 +12,7 @@ const Services = () => {
     <div className="w-full flex justify-center bg-sky-50">
       <div className="w-[65%] my-[150px] max-md:w-[90%]">
         <div className="text-center mb-16">
-          <h2 className="text-3xl text-sky-950 tracking-tighter sm:text-4xl md:text-5xl uppercase">
+          <h2 className="text-3xl text-sky-950 tracking-tighter sm:text-4xl md:text-5xl uppercase font-light">
             Nuestros Servicios
           </h2>
           <p className="mt-4 text-sky-800 uppercase tracking-wide">

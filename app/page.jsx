@@ -7,6 +7,7 @@ import About from "./components/About";
 import Consultoria from "./components/Consultoria";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
+import Blogs from "./components/Blogs";
 
 export default function Home() {
   const [years, setYears] = useState(0);
@@ -77,6 +78,7 @@ export default function Home() {
       <About />
       <Consultoria />
       <Services />
+      <Blogs/>
       <div className="w-full flex justify-center bg-sky-100 relative">
         <Image
           className="absolute top-0 left-0 h-full w-full object-cover select-none brightness-45 z-[0]"
@@ -106,7 +108,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
+      </div>    
       <Contact />
     </div>
   );
