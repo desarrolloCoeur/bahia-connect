@@ -104,7 +104,7 @@ const page = () => {
       <div className="relative h-[40vh] w-full">
         <Image
           className="h-full w-full object-cover select-none brightness-40"
-          src="/assets/image7.jpg"
+          src="/assets/about.jpg"
           alt="hero-img"
           width={1400}
           height={900}

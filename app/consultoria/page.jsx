@@ -8,8 +8,8 @@ const page = () => {
     <div className="bg-sky-50">
       <div className="relative h-[40vh] w-full">
         <Image
-          className="h-full w-full object-cover select-none brightness-50 md:brightness-95"
-          src="/assets/image.jpg"
+          className="h-full w-full object-cover select-none brightness-50"
+          src="/assets/consul.jpg"
           alt="hero-img"
           width={1400}
           height={900}
