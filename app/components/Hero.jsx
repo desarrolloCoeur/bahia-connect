@@ -16,7 +16,7 @@ const Hero = () => {
         -translate-x-1/2 -translate-y-1/2
         text-sky-50 text-center w-full sm:w-[80%] md:w-[70%] lg:w-[60%]"
       >
-        <h1 className="uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mt-6 sm:mt-10 md:mt-16 lg:mb-[20px]">
+        <h1 className="uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-6 sm:mt-10 md:mt-16 lg:mb-[20px] font-semibold">
           Experiencia, Integridad y Excelencia
         </h1>
         <div className="flex justify-center">

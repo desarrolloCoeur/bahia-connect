@@ -90,7 +90,7 @@ export default function Home() {
         <div className="w-[80%] z-[1] max-md:w-[90%]">
           <div className="flex flex-col items-center justify-center space-y-4 text-center my-[100px]">
             <Image
-              className="object-cover select-none overflow-hidden w-[350px]"
+              className="object-cover select-none overflow-hidden w-[250px]"
               src="/assets/logo-navbar2.png"
               alt="hero-logo"
               width={800}

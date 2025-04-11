@@ -64,25 +64,6 @@ const Blogs = () => {
           </section>
         </div>
       </div>
-      <div className="relative w-full flex justify-center bg-white py-20">
-        <Image
-          className="absolute top-0 left-0 h-full w-full object-cover select-none brightness-25 z-[0]"
-          src="/assets/hero-z.jpg"
-          alt="about-relleno"
-          width={1920}
-          height={900}
-        />
-        <div className="relative w-[80%] md:w-[60%] text-center">
-          <p className="text-sky-50 font-light text-4xl mb-8">
-            Nuestro compromiso es brindar un servicio personalizado y
-            profesional
-          </p>
-          <button className="cursor-pointer px-6 py-2 border border-sky-50 text-sky-50 uppercase hover:bg-sky-800 hover:text-white transition-colors">
-            Contáctanos
-          </button>
-        </div>
-      </div>
-      <Contact />
     </div>
   );
 };
