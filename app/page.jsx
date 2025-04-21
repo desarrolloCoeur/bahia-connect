@@ -27,9 +27,9 @@ export default function Home() {
           let clientsCount = 0;
 
           const interval = setInterval(() => {
-            setYears((prev) => (prev < 18 ? prev + 1 : 18));
-            setTons((prev) => (prev < 100 ? prev + 5 : 100));
-            setClients((prev) => (prev < 40 ? prev + 2 : 40));
+            setYears((prev) => (prev < 18 ? prev + 1 : 23));
+            setTons((prev) => (prev < 100 ? prev + 5 : 35));
+            setClients((prev) => (prev < 40 ? prev + 1 : 33));
 
             yearsCount += 2;
             tonsCount += 1200;
@@ -68,17 +68,110 @@ export default function Home() {
             <p className="text-2xl">Proyectos</p>
           </div>
           <div className="max-lg:py-5">
-            <h1 className=" text-6xl max-lg:text-4xl">
-              +{clients}
-            </h1>
+            <h1 className=" text-6xl max-lg:text-4xl">+{clients}</h1>
             <p className="text-2xl">Clientes</p>
           </div>
         </div>
       </div>
       <About />
+      <div className="w-full flex justify-center bg-sky-50">
+        <div className="w-[65%] my-[150px] max-md:w-[90%]">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl text-sky-950 tracking-tighter sm:text-4xl md:text-5xl uppercase font-light">
+              ¿Por qué elegirnos?
+            </h2>
+            <p className="mt-4 text-sky-800 uppercase tracking-wide">
+              Más que un servicio, una garantía de calidad
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+            {/* Servicio 1: Administración de Propiedades */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 text-gray-400"></div>
+              <div>
+                <h3 className="text-lg font-medium uppercase mb-3">
+                  Experiencia comprobada
+                </h3>
+                <p className="text-gray-600">
+                  Con más de 23 años en el sector de la región de Bahía de
+                  Banderas, hemos gestionado con éxito múltiples proyectos de
+                  gran escala, desde Punta Mita y sus alrededores hasta Costa
+                  Norte de Nayarit, Sierra Madre y Costa Alegre de Jalisco,
+                  siempre enfocándonos en los resultados.
+                </p>
+              </div>
+            </div>
+
+            {/* Servicio 2: Administración */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 text-gray-400"></div>
+              <div>
+                <h3 className="text-lg font-medium uppercase mb-3">
+                  Soluciones personalizadas
+                </h3>
+                <p className="text-gray-600">
+                  Entendemos que cada proyecto es único. Por eso, ofrecemos
+                  soluciones a medida que se adaptan a las necesidades
+                  específicas de tu comunidad o empresa.
+                </p>
+              </div>
+            </div>
+
+            {/* Servicio 3: Operación */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 text-gray-400"></div>
+              <div>
+                <h3 className="text-lg font-medium uppercase mb-3">
+                  Transparencia y confianza
+                </h3>
+                <p className="text-gray-600">
+                  Mantenemos una comunicación constante y clara con nuestros
+                  clientes, brindando informes detallados y actualizaciones
+                  periódicas.
+                </p>
+              </div>
+            </div>
+
+            {/* Servicio 4: Mantenimiento */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 text-gray-400"></div>
+              <div>
+                <h3 className="text-lg font-medium uppercase mb-3">
+                  Compromiso con la excelencia
+                </h3>
+                <p className="text-gray-600">
+                  Nuestra prioridad es la satisfacción de nuestros clientes, por
+                  lo que trabajamos bajo los más altos estándares de calidad.
+                </p>
+              </div>
+            </div>
+
+            {/* Servicio 6: Reportes Financieros */}
+            {/* <div className="flex gap-6">
+            <div className="flex-shrink-0 text-gray-400">
+              <BarChart className="h-6 w-6" />
+            </div>
+            <div>
+              <h3 className="text-lg font-medium uppercase mb-3">
+                Reportes Financieros
+              </h3>
+              <p className="text-gray-600">
+                Proporcionamos informes financieros detallados y transparentes
+                que permiten a los propietarios y a la administración tomar
+                decisiones informadas. Nuestros reportes incluyen balances
+                mensuales, control de gastos, presupuestos anuales y
+                proyecciones financieras, todo accesible a través de nuestra
+                plataforma digital.
+              </p>
+            </div>
+          </div> */}
+          </div>
+        </div>
+      </div>
       <Consultoria />
       <Services />
-      <Blogs/>
+      <Blogs />
       <div className="w-full flex justify-center bg-sky-100 relative">
         <Image
           className="absolute top-0 left-0 h-full w-full object-cover select-none brightness-45 z-[0]"
@@ -108,7 +201,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>    
+      </div>
       <Contact />
     </div>
   );

@@ -23,18 +23,16 @@ const About = () => {
             Sobre Nosotros
           </h1>
           <p className="text-gray-900 text-base md:text-lg text-center md:text-left">
-            Nos dedicamos a la administración de propiedades, gestión de
-            condominios y consultoría especializada. Tenemos más de 18 años de
-            experiencia trabajando en la operación y cuidado de propiedades en
-            Punta Mita, así como más de 15 años administrando rentas
-            vacacionales y residencias de forma integral. Nuestro enfoque es
-            brindar soluciones confiables, personalizadas y con atención al
-            detalle, para que tú solo te preocupes por disfrutar tu inversión.
+            En Bahía Connect, somos expertos en la administración de condominios
+            y asociaciones civiles. Ofrecemos soluciones integrales para la
+            gestión de áreas comunes y unidades residenciales, asegurando
+            eficiencia, seguridad y bienestar para todos los usuarios. Contando
+            con más de 23 años de experiencia que nos avalan.
           </p>
           <div className="flex justify-center md:justify-start">
             <a href="/about">
               <div className="p-3 bg-sky-700 text-sky-50 mt-9 hover:bg-sky-900">
-                Ver Más
+                Conócenos
               </div>
             </a>
           </div>

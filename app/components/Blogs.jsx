@@ -4,10 +4,6 @@ import { useMobile } from "../../hooks/use-mobile"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useState, useRef } from "react"
 
-export const metadata = {
-  title: "Blog | Bahía Conectada",
-  description: "Consejos y estrategias para maximizar el valor de tu propiedad en la costa",
-}
 
 const Blogs = () => {
   const isMobile = useMobile()

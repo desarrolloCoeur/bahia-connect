@@ -154,7 +154,7 @@ const page = () => {
             </h1>
             <p className="font-light text-gray-900">
               Nuestra visión es consolidarnos como líderes en el sector de
-              administración de propiedades y rentas vacacionales en Punta Mita,
+              administración de propiedades y rentas vacacionales de alto nivel,
               ofreciendo soluciones innovadoras y personalizadas que garanticen
               el máximo rendimiento de cada propiedad. A través de un{" "}
               <span className="font-normal text-sky-800">

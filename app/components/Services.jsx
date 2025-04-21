@@ -16,7 +16,7 @@ const Services = () => {
             Nuestros Servicios
           </h2>
           <p className="mt-4 text-sky-800 uppercase tracking-wide">
-            ADMINISTRACIÓN SIN COMPLICACIONES
+            Ofrecemos una amplia gama de servicios adaptados a tus necesidades
           </p>
         </div>
 
@@ -28,13 +28,12 @@ const Services = () => {
             </div>
             <div>
               <h3 className="text-lg font-medium uppercase mb-3">
-                Administración de Propiedades
+                Gestión de Mega Proyectos
               </h3>
               <p className="text-gray-600">
-                Durante 18 años, hemos realizado gestión de propiedades y
-                consultoría en Punta Mita, siempre buscando adaptarnos a las
-                necesidades de los clientes para ofrecer servicios
-                excepcionales.
+                Desde la planificación del BOH, amenidades, hasta la ejecución y
+                monitoreo, asegurando que cada etapa se cumpla según los plazos
+                y presupuestos establecidos.
               </p>
             </div>
           </div>
@@ -46,11 +45,12 @@ const Services = () => {
             </div>
             <div>
               <h3 className="text-lg font-medium uppercase mb-3">
-                Administración
+                Administración de Condominios y Áreas Comunes
               </h3>
               <p className="text-gray-600">
-                Gestionamos eficientemente todos los aspectos administrativos de
-                su condominio, garantizando transparencia y resultados óptimos.
+                Nos encargamos del mantenimiento, la seguridad y el buen
+                funcionamiento de todas las instalaciones comunes, garantizando
+                la calidad de vida de los residentes.
               </p>
             </div>
           </div>
@@ -58,14 +58,15 @@ const Services = () => {
           {/* Servicio 3: Operación */}
           <div className="flex gap-6">
             <div className="flex-shrink-0 text-gray-400">
-              <Building2 className="h-6 w-6" />
+              <Tool className="h-6 w-6" />
             </div>
             <div>
-              <h3 className="text-lg font-medium uppercase mb-3">Operación</h3>
+              <h3 className="text-lg font-medium uppercase mb-3">
+                Asociaciones Civiles
+              </h3>
               <p className="text-gray-600">
-                Nos encargamos de la operación diaria de su condominio,
-                asegurando que todo funcione correctamente y resolviendo
-                cualquier incidencia de manera inmediata.
+                Gestión eficiente y organizada de asociaciones, asegurando su
+                buen funcionamiento y el cumplimiento de normativas legales.
               </p>
             </div>
           </div>
@@ -73,31 +74,15 @@ const Services = () => {
           {/* Servicio 4: Mantenimiento */}
           <div className="flex gap-6">
             <div className="flex-shrink-0 text-gray-400">
-              <Tool className="h-6 w-6" />
+              <Building2 className="h-6 w-6" />
             </div>
             <div>
               <h3 className="text-lg font-medium uppercase mb-3">
-                Mantenimiento
+                Unidades Residenciales
               </h3>
               <p className="text-gray-600">
-                Implementamos programas de mantenimiento integral para preservar
-                y mejorar las instalaciones de su condominio, prolongando su
-                vida útil y valor.
-              </p>
-            </div>
-          </div>
-
-          {/* Servicio 5: Seguridad */}
-          <div className="flex gap-6">
-            <div className="flex-shrink-0 text-gray-400">
-              <Shield className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium uppercase mb-3">Seguridad</h3>
-              <p className="text-gray-600">
-                Desarrollamos e implementamos planes integrales de seguridad
-                para proteger a los residentes y sus propiedades con los más
-                altos estándares.
+                Administración completa de propiedades residenciales, desde el
+                alquiler hasta el mantenimiento diario.
               </p>
             </div>
           </div>
