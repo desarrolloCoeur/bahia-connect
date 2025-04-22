@@ -37,7 +37,7 @@ export default function AboutPage() {
       credentials: "J.D., CCIM",
       email: "martha@bahiaconnect.com",
       phone: "(855) 655-5544",
-      image: "/assets/team/IMG_0194.jpg",
+      image: "/assets/team/mart.jpeg",
     },
     {
       name: "Gillermo Poegner",
