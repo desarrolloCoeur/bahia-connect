@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="hidden md:block md:col-span-1"></div>
 
           {/* Content area */}
-          <div className="col-span-12 md:col-span-6 lg:col-span-5 space-y-8">
+          <div className="col-span-12 lg:col-span-10 xl:col-span-5 space-y-2 xl:space-y-8">
             <div className="h-1 w-16 bg-sky-600"></div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white">
               Experiencia, Integridad y Excelencia

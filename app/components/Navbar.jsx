@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="grid grid-cols-12 items-center">
             {/* Logo */}
             <div className="col-span-4 md:col-span-3">
-              <a href="/" className="block w-[180px] h-[120px] relative">
+              <a href="/" className="block w-[150px] h-[90px] relative">
                 <Image src="/assets/logo-navbar2.png" alt="Bahía Connect" fill className="object-contain" priority />
               </a>
             </div>
