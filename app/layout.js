@@ -17,9 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Bahía Connect",
-  description: "Evaluación integral para la mejora continua y sostenibilidad de su condominio.",
+  description:
+    "Expertos en administración de condominios, asociaciones civiles y consultoría 360° en Bahía de Banderas, Nayarit. Más de 23 años de experiencia en gestión de propiedades.",
   keywords:
-    "Restaurant La Peñita, La Peñita de Jaltemba, Koral La Peñita, Mixologia la Peñita, Comida La Peñita, Cena La Peñita",
+    "administración de condominios, gestión de propiedades, Bahía de Banderas, Nayarit, Punta Mita, asociaciones civiles, consultoría inmobiliaria, mantenimiento de propiedades, administración de áreas comunes, servicios inmobiliarios, propiedades vacacionales, inversión inmobiliaria, condominios en playa",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/logo-dp.png",
@@ -33,10 +34,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
-        <WhastappButton/>
+        <Footer />
+        <WhastappButton />
       </body>
     </html>
   );

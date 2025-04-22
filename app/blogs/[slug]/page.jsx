@@ -1,14 +1,20 @@
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
-import Contact from "../../components/Contact"
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import Contact from "../../components/Contact";
 
 export async function generateMetadata({ params }) {
-  const post = getBlogPost(params.slug)
-
+  const post = getBlogPost(params.slug);
   return {
-    title: `${post.title} | Bahía Connect`,
-    description: post.excerpt || "Artículo del blog de Bahía Connect",
-  }
+    title: `${post.title} | Blog de Bahía Connect`,
+    description:
+      post.excerpt ||
+      "Artículo del blog de Bahía Connect sobre administración de propiedades",
+    keywords: `${post.category.toLowerCase()}, administración de propiedades, Bahía de Banderas, Nayarit, ${post.title
+      .toLowerCase()
+      .replace(/[^\w\s]/gi, "")
+      .split(" ")
+      .join(", ")}`,
+  };
 }
 
 const getBlogPost = (slug) => {
@@ -38,12 +44,14 @@ const getBlogPost = (slug) => {
       `,
       date: "2025-04-10",
       category: "Consultoría",
-      excerpt: "Descubre cómo aprovechar al máximo tu propiedad en la costa con nuestra consultoría integral.",
+      excerpt:
+        "Descubre cómo aprovechar al máximo tu propiedad en la costa con nuestra consultoría integral.",
     },
     "administracion-propiedades-inversion-protegida": {
       img: "/assets/blog/2.jpg",
       img2: "/assets/blog/2.2.jpg",
-      title: "Administración de propiedades: tu inversión protegida todo el año",
+      title:
+        "Administración de propiedades: tu inversión protegida todo el año",
       content: `
         <p>Tener una propiedad en la playa es un sueño para muchos, pero administrarla correctamente puede convertirse en un verdadero reto si no se cuenta con el apoyo adecuado. En Bahía Conectada, nos especializamos en la administración de propiedades, un servicio diseñado para cuidar tu inversión mientras tú disfrutas de los beneficios.</p>
         
@@ -72,12 +80,14 @@ const getBlogPost = (slug) => {
       `,
       date: "2025-04-10",
       category: "Administración",
-      excerpt: "Cómo cuidar tu propiedad en la playa mientras disfrutas de los beneficios.",
+      excerpt:
+        "Cómo cuidar tu propiedad en la playa mientras disfrutas de los beneficios.",
     },
     "clave-rentabilizar-inversion-sin-estres": {
       img: "/assets/blog/3.jpg",
       img2: "/assets/blog/3.2.jpg",
-      title: "Administración de propiedades: la clave para rentabilizar tu inversión sin estrés",
+      title:
+        "Administración de propiedades: la clave para rentabilizar tu inversión sin estrés",
       content: `
         <p>Tener una propiedad en un destino turístico es un privilegio, pero también una gran responsabilidad. Las tareas de mantenimiento, la coordinación con proveedores, el trato con huéspedes y los aspectos legales pueden convertirse en un dolor de cabeza si no cuentas con el apoyo adecuado. En Bahía Conectada, ofrecemos un servicio completo de administración de propiedades con enfoque estratégico y personalizado.</p>
         
@@ -106,7 +116,8 @@ const getBlogPost = (slug) => {
       `,
       date: "2025-04-10",
       category: "Rentabilidad",
-      excerpt: "Convierte tu propiedad turística en un activo rentable sin complicaciones.",
+      excerpt:
+        "Convierte tu propiedad turística en un activo rentable sin complicaciones.",
     },
     "renta-vacacional-retorno-asegurado": {
       img: "/assets/blog/2.jpg",
@@ -140,41 +151,49 @@ const getBlogPost = (slug) => {
       `,
       date: "2023-08-05",
       category: "Renta Vacacional",
-      excerpt: "Aprovecha el auge turístico y convierte tu propiedad en una fuente de ingresos.",
+      excerpt:
+        "Aprovecha el auge turístico y convierte tu propiedad en una fuente de ingresos.",
     },
-  }
+  };
 
-  return blogPosts[slug] || null
-}
+  return blogPosts[slug] || null;
+};
 
 // Custom BlogContent component with Swiss design styling
 function BlogContent({ content }) {
   // Convert HTML string to React components with Swiss styling
   const formattedContent = content
-    .replace(/<p>(.*?)<\/p>/g, '<p class="text-gray-700 font-light leading-relaxed mb-8">$1</p>')
+    .replace(
+      /<p>(.*?)<\/p>/g,
+      '<p class="text-gray-700 font-light leading-relaxed mb-8">$1</p>'
+    )
     .replace(
       /<h2>(.*?)<\/h2>/g,
-      '<h2 class="text-2xl font-normal uppercase tracking-wide mb-6 mt-12 border-l-2 border-sky-600 pl-4">$1</h2>',
+      '<h2 class="text-2xl font-normal uppercase tracking-wide mb-6 mt-12 border-l-2 border-sky-600 pl-4">$1</h2>'
     )
     .replace(/<ul>(.*?)<\/ul>/gs, '<ul class="space-y-4 mb-8 pl-6">$1</ul>')
     .replace(
       /<li>(.*?)<\/li>/g,
-      '<li class="flex items-start"><div class="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div><span class="text-gray-700 font-light">$1</span></li>',
-    )
+      '<li class="flex items-start"><div class="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div><span class="text-gray-700 font-light">$1</span></li>'
+    );
 
-  return <div dangerouslySetInnerHTML={{ __html: formattedContent }} />
+  return <div dangerouslySetInnerHTML={{ __html: formattedContent }} />;
 }
 
 export default function BlogPost({ params }) {
-  const post = getBlogPost(params.slug)
+  const post = getBlogPost(params.slug);
 
   if (!post) {
     return (
       <main className="w-full bg-white py-24">
         <div className="container mx-auto px-6 text-center">
           <div className="h-[2px] w-16 bg-sky-600 mb-8 mx-auto"></div>
-          <h1 className="text-3xl font-light uppercase tracking-tight mb-6">Artículo no encontrado</h1>
-          <p className="text-gray-600 font-light mb-8">El blog que buscas no existe o ha sido removido.</p>
+          <h1 className="text-3xl font-light uppercase tracking-tight mb-6">
+            Artículo no encontrado
+          </h1>
+          <p className="text-gray-600 font-light mb-8">
+            El blog que buscas no existe o ha sido removido.
+          </p>
           <a
             href="/blogs"
             className="inline-flex items-center border border-black px-6 py-3 text-black uppercase hover:bg-sky-600 hover:border-sky-600 hover:text-white transition-colors group"
@@ -184,14 +203,14 @@ export default function BlogPost({ params }) {
           </a>
         </div>
       </main>
-    )
+    );
   }
 
   const formattedDate = new Date(post.date).toLocaleDateString("es-MX", {
     day: "numeric",
     month: "long",
     year: "numeric",
-  })
+  });
 
   return (
     <main>
@@ -228,7 +247,10 @@ export default function BlogPost({ params }) {
                     Inicio
                   </a>
                   <span className="mx-2">/</span>
-                  <a href="/blogs" className="hover:text-sky-600 transition-colors">
+                  <a
+                    href="/blogs"
+                    className="hover:text-sky-600 transition-colors"
+                  >
                     Blog
                   </a>
                   <span className="mx-2">/</span>
@@ -261,12 +283,21 @@ export default function BlogPost({ params }) {
               <div className="sticky top-24">
                 <div className="border-t-2 border-sky-600 pt-6">
                   <div className="mb-6">
-                    <span className="text-xs uppercase tracking-wider text-gray-500 block mb-1">Categoría</span>
-                    <span className="text-base font-normal">{post.category}</span>
+                    <span className="text-xs uppercase tracking-wider text-gray-500 block mb-1">
+                      Categoría
+                    </span>
+                    <span className="text-base font-normal">
+                      {post.category}
+                    </span>
                   </div>
                   <div className="mb-6">
-                    <span className="text-xs uppercase tracking-wider text-gray-500 block mb-1">Fecha</span>
-                    <time dateTime={post.date} className="text-base font-normal">
+                    <span className="text-xs uppercase tracking-wider text-gray-500 block mb-1">
+                      Fecha
+                    </span>
+                    <time
+                      dateTime={post.date}
+                      className="text-base font-normal"
+                    >
                       {formattedDate}
                     </time>
                   </div>
@@ -312,7 +343,13 @@ export default function BlogPost({ params }) {
 
       {/* CTA section with Swiss design */}
       <section className="w-full relative h-[60vh] overflow-hidden">
-        <Image src="/assets/hero-z.jpg" alt="Contáctanos" fill className="object-cover grayscale-[70%]" priority />
+        <Image
+          src="/assets/hero-z.jpg"
+          alt="Contáctanos"
+          fill
+          className="object-cover grayscale-[70%]"
+          priority
+        />
         <div className="absolute inset-0 bg-black/70"></div>
 
         {/* Swiss design grid overlay */}
@@ -329,7 +366,8 @@ export default function BlogPost({ params }) {
               <div className="col-span-12 md:col-span-8 md:col-start-3 text-center">
                 <div className="h-[2px] w-16 bg-sky-600 mb-8 mx-auto"></div>
                 <p className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-10 max-w-3xl mx-auto">
-                  Nuestro compromiso es brindar un servicio personalizado y profesional
+                  Nuestro compromiso es brindar un servicio personalizado y
+                  profesional
                 </p>
                 <a
                   href="/contact"
@@ -359,5 +397,5 @@ export default function BlogPost({ params }) {
       {/* Contact section */}
       <Contact />
     </main>
-  )
+  );
 }

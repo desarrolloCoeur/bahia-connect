@@ -1,13 +1,34 @@
-import { Building2, ClipboardCheck, Shield, Wrench, ArrowRight } from "lucide-react"
-import Image from "next/image"
-import Contact from "../components/Contact"
+import {
+  Building2,
+  ClipboardCheck,
+  Shield,
+  Wrench,
+  ArrowRight,
+} from "lucide-react";
+import Image from "next/image";
+import Contact from "../components/Contact";
+
+export const metadata = {
+  title:
+    "Servicios | Bahía Connect - Administración y Mantenimiento de Propiedades",
+  description:
+    "Servicios profesionales de administración, operación, mantenimiento y seguridad para condominios y propiedades en Bahía de Banderas. Soluciones integrales para propietarios e inversionistas.",
+  keywords:
+    "administración de propiedades, mantenimiento de condominios, seguridad inmobiliaria, operación de condominios, gestión de áreas comunes, servicios para propietarios, Bahía de Banderas, Nayarit, Punta Mita, servicios inmobiliarios",
+};
 
 export default function ServicesPage() {
   return (
     <main>
       {/* Hero section with Swiss design */}
       <div className="relative h-[500px] w-full overflow-hidden">
-        <Image src="/assets/image2.jpg" alt="Servicios" fill className="object-cover grayscale-[70%]" priority />
+        <Image
+          src="/assets/image2.jpg"
+          alt="Servicios"
+          fill
+          className="object-cover grayscale-[70%]"
+          priority
+        />
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Swiss design grid overlay */}
@@ -58,16 +79,22 @@ export default function ServicesPage() {
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-7 md:col-start-1">
               <div className="flex items-start mb-6">
-                <span className="text-6xl font-light text-sky-600 mr-4">01</span>
+                <span className="text-6xl font-light text-sky-600 mr-4">
+                  01
+                </span>
                 <div className="h-[1px] w-full bg-white mt-6"></div>
               </div>
-              <h2 className="text-3xl font-light tracking-tight uppercase mb-8">Nuestros Servicios</h2>
+              <h2 className="text-3xl font-light tracking-tight uppercase mb-8">
+                Nuestros Servicios
+              </h2>
               <div className="absolute -bottom-4 -left-4 w-16 h-16 border border-sky-600 hidden md:block"></div>
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-lg font-light leading-relaxed">
-                Durante 18 años, hemos realizado gestión de propiedades y consultoría en Punta Mita, siempre buscando
-                adaptarnos a las necesidades de los clientes para ofrecer servicios excepcionales.
+                Durante 18 años, hemos realizado gestión de propiedades y
+                consultoría en Punta Mita, siempre buscando adaptarnos a las
+                necesidades de los clientes para ofrecer servicios
+                excepcionales.
               </p>
             </div>
           </div>
@@ -114,7 +141,9 @@ export default function ServicesPage() {
               <div className="h-[1px] w-full bg-black mt-6"></div>
             </div>
             <div className="col-span-12 md:col-span-9">
-              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-4">Categorías de Servicios</h2>
+              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-4">
+                Categorías de Servicios
+              </h2>
               <p className="text-sm uppercase tracking-widest text-gray-600 font-light">
                 Soluciones integrales para su propiedad
               </p>
@@ -127,7 +156,9 @@ export default function ServicesPage() {
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <Building2 className="h-6 w-6 text-sky-600 mr-4" />
-                  <h3 className="text-xl font-normal uppercase tracking-wide">Administración</h3>
+                  <h3 className="text-xl font-normal uppercase tracking-wide">
+                    Administración
+                  </h3>
                 </div>
                 <div className="p-8">
                   <ul className="space-y-4">
@@ -154,7 +185,9 @@ export default function ServicesPage() {
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <ClipboardCheck className="h-6 w-6 text-sky-600 mr-4" />
-                  <h3 className="text-xl font-normal uppercase tracking-wide">Operación</h3>
+                  <h3 className="text-xl font-normal uppercase tracking-wide">
+                    Operación
+                  </h3>
                 </div>
                 <div className="p-8">
                   <ul className="space-y-4">
@@ -181,18 +214,23 @@ export default function ServicesPage() {
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <Wrench className="h-6 w-6 text-sky-600 mr-4" />
-                  <h3 className="text-xl font-normal uppercase tracking-wide">Mantenimiento</h3>
+                  <h3 className="text-xl font-normal uppercase tracking-wide">
+                    Mantenimiento
+                  </h3>
                 </div>
                 <div className="p-8">
                   <ul className="space-y-4">
-                    {["Preventivo", "Correctivo", "Estético", "Gestión y control del mantenimiento"].map(
-                      (item, index) => (
-                        <li key={index} className="flex items-start">
-                          <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
-                          <span className="text-gray-700 font-light">{item}</span>
-                        </li>
-                      ),
-                    )}
+                    {[
+                      "Preventivo",
+                      "Correctivo",
+                      "Estético",
+                      "Gestión y control del mantenimiento",
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                        <span className="text-gray-700 font-light">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -204,7 +242,9 @@ export default function ServicesPage() {
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <Shield className="h-6 w-6 text-sky-600 mr-4" />
-                  <h3 className="text-xl font-normal uppercase tracking-wide">Seguridad</h3>
+                  <h3 className="text-xl font-normal uppercase tracking-wide">
+                    Seguridad
+                  </h3>
                 </div>
                 <div className="p-8">
                   <ul className="space-y-4">
@@ -232,7 +272,13 @@ export default function ServicesPage() {
 
       {/* CTA section with Swiss design */}
       <section className="w-full relative h-[60vh] overflow-hidden">
-        <Image src="/assets/image4.jpg" alt="Servicios" fill className="object-cover grayscale-[70%]" priority />
+        <Image
+          src="/assets/image4.jpg"
+          alt="Servicios"
+          fill
+          className="object-cover grayscale-[70%]"
+          priority
+        />
         <div className="absolute inset-0 bg-black/70"></div>
 
         {/* Swiss design grid overlay */}
@@ -279,5 +325,5 @@ export default function ServicesPage() {
       {/* Contact section */}
       <Contact />
     </main>
-  )
+  );
 }
