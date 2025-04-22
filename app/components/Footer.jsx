@@ -1,5 +1,4 @@
-import { Mail, Phone } from "lucide-react"
-import Image from "next/image"
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -11,7 +10,9 @@ const Footer = () => {
             <div className="h-[2px] w-full bg-sky-600 mt-4"></div>
           </div>
           <div className="col-span-12 md:col-span-9 mt-6 md:mt-0">
-            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-white uppercase">Bahía Connect</h2>
+            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-white uppercase">
+              Bahía Connect
+            </h2>
           </div>
         </div>
 
@@ -20,7 +21,12 @@ const Footer = () => {
           {/* Logo column */}
           <div className="col-span-12 md:col-span-4 relative">
             <div className="relative h-[120px] w-[220px]">
-              <Image src="/assets/logo-white.png" alt="Bahía Connect" fill className="object-contain object-left" />
+              <Image
+                src="/assets/logo-white.png"
+                alt="Bahía Connect"
+                fill
+                className="object-contain object-left"
+              />
             </div>
             {/* Swiss design element */}
             <div className="absolute -bottom-4 -left-4 w-12 h-12 border border-sky-600 hidden md:block"></div>
@@ -32,19 +38,34 @@ const Footer = () => {
               Navegación
             </h3>
             <nav className="space-y-3">
-              <a href="/" className="block text-sm font-light hover:text-sky-600 transition-colors">
+              <a
+                href="/"
+                className="block text-sm font-light hover:text-sky-600 transition-colors"
+              >
                 Inicio
               </a>
-              <a href="/consultoria" className="block text-sm font-light hover:text-sky-600 transition-colors">
+              <a
+                href="/consultoria"
+                className="block text-sm font-light hover:text-sky-600 transition-colors"
+              >
                 Consultoría
               </a>
-              <a href="/services" className="block text-sm font-light hover:text-sky-600 transition-colors">
+              <a
+                href="/services"
+                className="block text-sm font-light hover:text-sky-600 transition-colors"
+              >
                 Servicios
               </a>
-              <a href="/about" className="block text-sm font-light hover:text-sky-600 transition-colors">
+              <a
+                href="/about"
+                className="block text-sm font-light hover:text-sky-600 transition-colors"
+              >
                 Nosotros
               </a>
-              <a href="/contact" className="block text-sm font-light hover:text-sky-600 transition-colors">
+              <a
+                href="/contact"
+                className="block text-sm font-light hover:text-sky-600 transition-colors"
+              >
                 Contacto
               </a>
             </nav>
@@ -57,18 +78,20 @@ const Footer = () => {
             </h3>
             <div className="space-y-3">
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-3 text-sky-600" />
                 <p className="text-sm font-light">(+52) 329 688 5505</p>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-3 text-sky-600" />
-                <p className="text-sm font-light lowercase">info@bahiaconnect.com</p>
+                <p className="text-sm font-light lowercase">
+                  info@bahiaconnect.com
+                </p>
               </div>
             </div>
 
             {/* Social links */}
             <div className="mt-8">
-              <h4 className="text-sm uppercase tracking-wider mb-4 font-light">Síguenos</h4>
+              <h4 className="text-sm uppercase tracking-wider mb-4 font-light">
+                Síguenos
+              </h4>
               <div className="flex space-x-6">
                 <a
                   href="#"
@@ -105,7 +128,14 @@ const Footer = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
@@ -131,12 +161,13 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 text-center">
           <p className="text-xs font-light text-white/70">
-            Copyright © {new Date().getFullYear()}. Todos los derechos reservados. Bahía Connect
+            Copyright © {new Date().getFullYear()}. Todos los derechos
+            reservados. Bahía Connect
           </p>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
