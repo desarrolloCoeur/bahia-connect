@@ -55,10 +55,10 @@ export default function Home() {
       <div ref={ref} className="bg-sky-800 flex justify-center">
         <div
           className=" grid grid-cols-3 grid-rows-auto gap-5 w-[80%] 
-        max-lg:w-[80%]  text-white text-center py-11 max-md:grid-cols-1"
+        max-lg:w-[80%]  text-white text-center py-11 max-md:grid-cols-1 font-light"
         >
           <div className="max-lg:py-5">
-            <h1 className=" text-6xl max-lg:text-4xl">{years}</h1>
+            <h1 className="text-6xl max-lg:text-4xl">{years}</h1>
             <p className="text-2xl">Años de Experiencia</p>
           </div>
           <div className="max-lg:py-5">
@@ -74,43 +74,48 @@ export default function Home() {
         </div>
       </div>
       <About />
-      <div className="w-full flex justify-center bg-sky-50">
-        <div className="w-[65%] my-[150px] max-md:w-[90%]">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl text-sky-950 tracking-tighter sm:text-4xl md:text-5xl uppercase font-light">
-              ¿Por qué elegirnos?
-            </h2>
-            <p className="mt-4 text-sky-800 uppercase tracking-wide">
-              Más que un servicio, una garantía de calidad
-            </p>
+      <div className="w-full bg-gray-50 py-24">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-12 gap-4 mb-16">
+            <div className="col-span-12 md:col-span-2 flex items-center">
+              <span className="text-6xl font-light text-sky-600">01</span>
+            </div>
+            <div className="col-span-12 md:col-span-10">
+              <div className="h-[1px] w-full bg-black mb-8"></div>
+              <h2 className="text-3xl font-light tracking-tight text-black mb-4">
+                ¿POR QUÉ ELEGIRNOS?
+              </h2>
+              <p className="text-sm uppercase tracking-widest text-gray-600 font-light">
+                Más que un servicio, una garantía de calidad
+              </p>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
-            {/* Servicio 1: Administración de Propiedades */}
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 text-gray-400"></div>
-              <div>
-                <h3 className="text-lg font-medium uppercase mb-3">
+          {/* Reasons grid with Swiss design */}
+          <div className="grid grid-cols-12 gap-y-12 gap-x-8">
+            {/* Reason 1 */}
+            <div className="col-span-12 md:col-span-5 md:col-start-3">
+              <div className="border-l-2 border-sky-600 pl-6">
+                <h3 className="text-base font-normal uppercase tracking-wide mb-4">
                   Experiencia comprobada
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-700 font-light">
                   Con más de 23 años en el sector de la región de Bahía de
                   Banderas, hemos gestionado con éxito múltiples proyectos de
-                  gran escala, desde Punta Mita y sus alrededores hasta Costa
+                  gran escala, desde Punta Mita y sus alskyedores hasta Costa
                   Norte de Nayarit, Sierra Madre y Costa Alegre de Jalisco,
                   siempre enfocándonos en los resultados.
                 </p>
               </div>
             </div>
 
-            {/* Servicio 2: Administración */}
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 text-gray-400"></div>
-              <div>
-                <h3 className="text-lg font-medium uppercase mb-3">
+            {/* Reason 2 */}
+            <div className="col-span-12 md:col-span-5 md:col-start-8">
+              <div className="border-l-2 border-sky-600 pl-6">
+                <h3 className="text-base font-normal uppercase tracking-wide mb-4">
                   Soluciones personalizadas
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-700 font-light">
                   Entendemos que cada proyecto es único. Por eso, ofrecemos
                   soluciones a medida que se adaptan a las necesidades
                   específicas de tu comunidad o empresa.
@@ -118,14 +123,13 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Servicio 3: Operación */}
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 text-gray-400"></div>
-              <div>
-                <h3 className="text-lg font-medium uppercase mb-3">
+            {/* Reason 3 */}
+            <div className="col-span-12 md:col-span-5 md:col-start-3">
+              <div className="border-l-2 border-sky-600 pl-6">
+                <h3 className="text-base font-normal uppercase tracking-wide mb-4">
                   Transparencia y confianza
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-700 font-light">
                   Mantenemos una comunicación constante y clara con nuestros
                   clientes, brindando informes detallados y actualizaciones
                   periódicas.
@@ -133,72 +137,109 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Servicio 4: Mantenimiento */}
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 text-gray-400"></div>
-              <div>
-                <h3 className="text-lg font-medium uppercase mb-3">
+            {/* Reason 4 */}
+            <div className="col-span-12 md:col-span-5 md:col-start-8">
+              <div className="border-l-2 border-sky-600 pl-6">
+                <h3 className="text-base font-normal uppercase tracking-wide mb-4">
                   Compromiso con la excelencia
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-700 font-light">
                   Nuestra prioridad es la satisfacción de nuestros clientes, por
                   lo que trabajamos bajo los más altos estándares de calidad.
                 </p>
               </div>
             </div>
+          </div>
 
-            {/* Servicio 6: Reportes Financieros */}
-            {/* <div className="flex gap-6">
-            <div className="flex-shrink-0 text-gray-400">
-              <BarChart className="h-6 w-6" />
+          {/* Swiss design geometric elements */}
+          <div className="grid grid-cols-12 mt-20">
+            <div className="col-span-1 col-start-2">
+              <div className="w-8 h-8 border border-black"></div>
             </div>
-            <div>
-              <h3 className="text-lg font-medium uppercase mb-3">
-                Reportes Financieros
-              </h3>
-              <p className="text-gray-600">
-                Proporcionamos informes financieros detallados y transparentes
-                que permiten a los propietarios y a la administración tomar
-                decisiones informadas. Nuestros reportes incluyen balances
-                mensuales, control de gastos, presupuestos anuales y
-                proyecciones financieras, todo accesible a través de nuestra
-                plataforma digital.
-              </p>
+            <div className="col-span-8 col-start-4">
+              <div className="h-[1px] w-full bg-black"></div>
             </div>
-          </div> */}
+            <div className="col-span-1 col-start-12">
+              <div className="w-4 h-4 bg-sky-600 ml-4"></div>
+            </div>
           </div>
         </div>
       </div>
       <Consultoria />
       <Services />
       <Blogs />
-      <div className="w-full flex justify-center bg-sky-100 relative">
-        <Image
-          className="absolute top-0 left-0 h-full w-full object-cover select-none brightness-45 z-[0]"
-          src="/assets/hero-q.jpg"
-          alt="hero-img"
-          width={1920}
-          height={900}
-        />
-        <div className="w-[80%] z-[1] max-md:w-[90%]">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center my-[100px]">
+      <div className="w-full relative overflow-hidden">
+        {/* Background with Swiss design treatment */}
+        <div className="absolute inset-0 grid grid-cols-12">
+          {/* Image container with grayscale effect */}
+          <div className="col-span-12 h-full">
             <Image
-              className="object-cover select-none overflow-hidden w-[250px]"
-              src="/assets/logo-navbar2.png"
-              alt="hero-logo"
-              width={800}
-              height={800}
+              src="/assets/hero-q.jpg"
+              alt="Background image"
+              fill
+              className="object-cover grayscale-[60%]"
+              priority
             />
-            {/* <h2 className="text-xl uppercase tracking-tighter sm:text-4xl md:text-4xl text-sky-200">
-              Cuidamos cada detalle para que tú solo disfrutes.
-            </h2> */}
-            <p className="max-w-[700px] text-gray-50 md:text-xl/relaxed lg:text-2xl/relaxed font-light">
-              Nos encargamos del mantenimiento, seguridad y administración de tu
-              propiedad para que tú solo te preocupes por lo importante:{" "}
-              <span className="italic font-normal">
-                vivir o invertir con tranquilidad.
-              </span>
-            </p>
+            <div className="absolute inset-0 bg-black/50"></div>
+          </div>
+
+          {/* Swiss design grid overlay */}
+          <div className="absolute inset-0 grid grid-cols-12 pointer-events-none">
+            <div className="col-span-1 h-full border-l border-white/10"></div>
+            <div className="col-span-1 col-start-5 h-full border-l border-white/10"></div>
+            <div className="col-span-1 col-start-9 h-full border-l border-white/10"></div>
+          </div>
+        </div>
+
+        {/* Content container */}
+        <div className="relative z-10 container mx-auto px-6 py-24">
+          <div className="grid grid-cols-12 gap-8">
+            {/* Section number */}
+            <div className="col-span-12 md:col-span-2 flex items-start">
+              <span className="text-6xl font-light text-sky-600">04</span>
+            </div>
+
+            {/* Content area */}
+            <div className="col-span-12 md:col-span-8">
+              {/* Logo with Swiss design treatment */}
+              <div className="mb-12 relative">
+                <div className="w-[180px] h-[180px] relative mx-auto md:mx-0">
+                  <Image
+                    src="/assets/logo-navbar2.png"
+                    alt="Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 w-16 h-16 border border-white/30 hidden md:block"></div>
+              </div>
+
+              {/* Quote with Swiss typography */}
+              <div className="relative">
+                <div className="h-[2px] w-16 bg-sky-600 mb-8 hidden md:block"></div>
+                <p className="text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed md:leading-relaxed lg:leading-relaxed max-w-3xl">
+                  Nos encargamos del mantenimiento, seguridad y administración
+                  de tu propiedad para que tú solo te preocupes por lo
+                  importante:{" "}
+                  <span className="font-normal text-sky-400">
+                    vivir o invertir con tranquilidad.
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            {/* Right column - geometric element */}
+            <div className="hidden md:block md:col-span-2">
+              <div className="w-12 h-12 bg-sky-600/20 mt-24"></div>
+            </div>
+          </div>
+
+          {/* Bottom Swiss design element */}
+          <div className="grid grid-cols-12 mt-16">
+            <div className="col-span-3 col-start-2 h-[1px] bg-white/20"></div>
+            <div className="col-span-1 col-start-11">
+              <div className="w-4 h-4 border border-white/50"></div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,234 +1,344 @@
-import Image from "next/image";
-import React from "react";
-import Contact from "../components/Contact";
-import { ClipboardCheck, FileText, Settings } from "lucide-react";
+import Image from "next/image"
+import { ClipboardCheck, FileText, Settings, ArrowRight } from "lucide-react"
+import Contact from "../components/Contact"
 
-const page = () => {
+export default function ConsultoriaPage() {
   return (
-    <div className="bg-sky-50">
-      <div className="relative h-[40vh] w-full">
-        <Image
-          className="h-full w-full object-cover select-none brightness-50"
-          src="/assets/consul.jpg"
-          alt="hero-img"
-          width={1400}
-          height={900}
-        />
+    <main>
+      {/* Hero section with Swiss design */}
+      <div className="relative h-[500px] w-full overflow-hidden">
+        <Image src="/assets/consul.jpg" alt="Consultoría" fill className="object-cover grayscale-[70%]" priority />
+        <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="absolute text-white bottom-[20%] left-[5%]  md:left-[20%] flex text-xl md:text-2xl font-light">
-          <h1 className="uppercase">Inicio</h1>
-          <span className="">/</span>
-          <h1 className="uppercase">Consultoría</h1>
+        {/* Swiss design grid overlay */}
+        <div className="absolute inset-0 grid grid-cols-12 pointer-events-none">
+          <div className="col-span-1 h-full border-l border-white/10"></div>
+          <div className="col-span-1 col-start-4 h-full border-l border-white/10"></div>
+          <div className="col-span-1 col-start-7 h-full border-l border-white/10"></div>
+          <div className="col-span-1 col-start-10 h-full border-l border-white/10"></div>
         </div>
-      </div>
-      <div className="flex justify-center bg-sky-900">
-        <div className="w-[90%] md:w-[80%] lg:w-[60%]">
-          <div className="py-[100px] text-xl">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="relative w-full md:w-1/2 flex">
-                <h1 className="p-5 uppercase text-4xl md:text-5xl font-light text-sky-50">
-                  Consultoría 360°
+
+        {/* Content container */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-12">
+              <div className="col-span-12 md:col-span-8 md:col-start-3">
+                <div className="h-[2px] w-16 bg-sky-600 mb-6"></div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white uppercase mb-4">
+                  Consultoría
                 </h1>
-              </div>
-              <div className="w-full md:w-1/2  text-left">
-                <div className="p-5 text-xl text-sky-100 font-light">
-                  <p>
-                    Nuestra consultoría 360° te ofrece una revisión completa del
-                    estado actual de tu propiedad o desarrollo. Con base en un
-                    análisis profundo, te damos recomendaciones claras y
-                    accionables para mejorar el plan de operación y
-                    mantenimiento. El objetivo es ayudarte a hacer tu proyecto
-                    más eficiente, rentable y sostenible a largo plazo.
-                  </p>
+                <div className="flex items-center text-sm text-white/80 uppercase tracking-wider font-light">
+                  <a href="/" className="hover:text-sky-600 transition-colors">
+                    Inicio
+                  </a>
+                  <span className="mx-2">/</span>
+                  <span className="text-white">Consultoría</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* body */}
-      <div className="w-full flex justify-center my-15">
-        <div className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
-          <h1 className="uppercase text-4xl md:text-5xl font-light mb-10">
-            Objetivo
-          </h1>
-          <p className="font-light text-gray-900">
-            Exponer los resultados preliminares del análisis centrado en el
-            estado del programa de mantenimiento y operación de las áreas
-            comunes del Condominio, así como en su infraestructura y activos.
-            Esta evaluación tiene como propósito identificar tanto los puntos
-            fuertes como las oportunidades de mejora en la gestión de estos
-            espacios, esenciales para el bienestar y la satisfacción de los
-            residentes.
-          </p>
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-[90%] md:w-[80%] lg:w-[60%] p-4 mt-2 mb-10">
-          <h2 className="mb-4 text-4xl font-light">Nuestro Proceso</h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div>
-              <div className="flex flex-row items-center gap-4 p-6">
-                <div className="flex h-12 w-12 justify-center">
-                  <FileText className="h-10 w-10 text-gray-600 font-light" />
-                </div>
-                <div>
-                  <h3 className="text-xl">Recopilación</h3>
-                  <p className="text-lg font-light">
-                    Documentación y análisis inicial
-                  </p>
-                </div>
-              </div>
-              <div className="px-6 pb-6">
-                <p className="font-light italic">
-                  Recopilamos y analizamos toda la documentación relevante para
-                  entender la estructura legal, operativa y financiera del
-                  condominio.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="flex flex-row items-center gap-4 p-6">
-                <div className="flex h-12 w-12 justify-center">
-                  <ClipboardCheck className="h-10 w-10 text-gray-600 font-light" />
-                </div>
-                <div>
-                  <h3 className="text-xl">Evaluación</h3>
-                  <p className="text-lg font-light">Inspección y diagnóstico</p>
-                </div>
-              </div>
-              <div className="px-6 pb-6">
-                <p className="font-light italic">
-                  Realizamos una inspección detallada de las instalaciones,
-                  infraestructura y procesos operativos para identificar
-                  fortalezas y áreas de oportunidad.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="flex flex-row items-center gap-4 p-6">
-                <div className="flex h-12 w-12 justify-center">
-                  <Settings className="h-10 w-10 text-gray-600 font-light" />
-                </div>
-                <div>
-                  <h3 className="text-xl">Recomendaciones</h3>
-                  <p className="text-lg font-light">
-                    Plan de acción personalizado
-                  </p>
-                </div>
-              </div>
-              <div className="px-6 pb-6">
-                <p className="font-light italic">
-                  Desarrollamos un plan detallado con recomendaciones
-                  específicas para optimizar la operación, mantenimiento y
-                  gestión del condominio.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="relative w-full flex justify-center bg-sky-900 py-20">
-        {/* <Image
-          className="absolute top-0 left-0 h-full w-full object-cover select-none brightness-25 z-[0]"
-          src="/assets/image5.jpg"
-          alt="about-relleno"
-          width={1920}
-          height={900}
-        /> */}
-        <div className="relative w-[80%] md:w-[60%] text-center">
-          <p className="text-sky-50 font-light text-4xl mb-8">
-            Nuestra prioridad es optimizar la gestión de su condominio.
-          </p>
-          <button className="cursor-pointer px-6 py-2 border border-sky-50 text-sky-50 uppercase hover:bg-sky-800 hover:text-white transition-colors">
-            Contáctanos
-          </button>
-        </div>
-      </div>
-      {/* documentos requeridos */}
-      <div className="flex justify-center w-full font-light my-20">
-        <section className="w-[90%] md:w-[80%] lg:w-[60%] p-4 my-2">
-          <h2 className="mb-8 text-4xl font-light">Documentos Requeridos</h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className=" ">
-              <div className="p-6">
-                <h3 className="text-xl font-normal">Documentación Legal</h3>
-              </div>
-              <div className="px-6 pb-6">
-                <ul className="list-inside list-disc space-y-2">
-                  <li>Régimen de Propiedad</li>
-                  <li>Reglamento Interior</li>
-                  <li>Reglamento de Construcción</li>
-                  <li>Actas de Asamblea</li>
-                  <li>Acta Constitutiva de la AC</li>
-                </ul>
-              </div>
-            </div>
-            <div className=" ">
-              <div className="p-6">
-                <h3 className="text-xl font-normal">Permisos y Concesiones</h3>
-              </div>
-              <div className="px-6 pb-6">
-                <ul className="list-inside list-disc space-y-2">
-                  <li>Manifestación de Impacto Ambiental (MIA)</li>
-                  <li>Concesión de Zona Federal</li>
-                  <li>Concesión de CNA</li>
-                  <li>Reportes a PROFEPA</li>
-                  <li>Pagos a ZOFEMAT</li>
-                </ul>
-              </div>
-            </div>
-            <div className=" ">
-              <div className="p-6">
-                <h3 className="text-xl font-normal">Documentación Técnica</h3>
-              </div>
-              <div className="px-6 pb-6">
-                <ul className="list-inside list-disc space-y-2">
-                  <li>Planos de infraestructura general</li>
-                  <li>Proyecto y plano de áreas verdes</li>
-                  <li>Programa de operación de planta de tratamiento</li>
-                  <li>Garantías (estructuras, equipamiento, etc.)</li>
-                </ul>
-              </div>
-            </div>
-            <div className=" ">
-              <div className="p-6">
-                <h3 className="text-xl font-normal">
-                  Documentación Administrativa
-                </h3>
-              </div>
-              <div className="px-6 pb-6">
-                <ul className="list-inside list-disc space-y-2">
-                  <li>Auditorías previas</li>
-                  <li>Presupuesto del año actual</li>
-                  <li>Reportes mensuales del Administrador</li>
-                  <li>Pólizas de mantenimiento</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div className="relative w-full flex justify-center bg-black py-20">
-        <Image
-          className="absolute top-0 left-0 h-full w-full object-cover select-none brightness-25 z-[0]"
-          src="/assets/image5.jpg"
-          alt="about-relleno"
-          width={1920}
-          height={900}
-        />
-        <div className="relative w-[80%] md:w-[60%] text-center">
-          <p className="text-sky-50 font-light text-4xl mb-8">
-            Contáctenos hoy mismo para programar una consultoría inicial
-          </p>
-          <button className="cursor-pointer px-6 py-2 border border-sky-50 text-sky-50 uppercase hover:bg-sky-800 hover:text-white transition-colors">
-            Solicitar información
-          </button>
-        </div>
-      </div>
-      <Contact />
-    </div>
-  );
-};
 
-export default page;
+        {/* Bottom grid line */}
+        <div className="absolute bottom-8 left-0 right-0 px-6">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-12">
+              <div className="col-span-3 h-[1px] bg-white/30"></div>
+              <div className="col-span-1 col-start-12">
+                <div className="w-4 h-4 bg-sky-600"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Consultoría 360° section with Swiss design */}
+      <section className="w-full bg-sky-800 text-white py-24">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-12 gap-8">
+            <div className="col-span-12 md:col-span-7 md:col-start-1">
+              <div className="flex items-start mb-6">
+                <span className="text-6xl font-light text-sky-600 mr-4">01</span>
+                <div className="h-[1px] w-full bg-white mt-6"></div>
+              </div>
+              <h2 className="text-3xl font-light tracking-tight uppercase mb-8">Consultoría 360°</h2>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 border border-sky-600 hidden md:block"></div>
+            </div>
+            <div className="col-span-12 md:col-span-5">
+              <p className="text-lg font-light leading-relaxed">
+                Nuestra consultoría 360° te ofrece una revisión completa del estado actual de tu propiedad o desarrollo.
+                Con base en un análisis profundo, te damos recomendaciones claras y accionables para mejorar el plan de
+                operación y mantenimiento. El objetivo es ayudarte a hacer tu proyecto más eficiente, rentable y
+                sostenible a largo plazo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Objetivo section with Swiss design */}
+      <section className="w-full bg-white py-24">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-12 gap-8">
+            <div className="col-span-12 md:col-span-3 flex items-start">
+              <span className="text-6xl font-light text-sky-600 mr-4">02</span>
+              <div className="h-[1px] w-full bg-black mt-6"></div>
+            </div>
+            <div className="col-span-12 md:col-span-9">
+              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-8">Objetivo</h2>
+              <p className="text-gray-800 font-light leading-relaxed max-w-3xl">
+                Exponer los resultados preliminares del análisis centrado en el estado del programa de mantenimiento y
+                operación de las áreas comunes del Condominio, así como en su infraestructura y activos. Esta evaluación
+                tiene como propósito identificar tanto los puntos fuertes como las oportunidades de mejora en la gestión
+                de estos espacios, esenciales para el bienestar y la satisfacción de los residentes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nuestro Proceso section with Swiss design */}
+      <section className="w-full bg-gray-50 py-24">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-12 gap-4 mb-16">
+            <div className="col-span-12 md:col-span-3 flex items-start">
+              <span className="text-6xl font-light text-sky-600 mr-4">03</span>
+              <div className="h-[1px] w-full bg-black mt-6"></div>
+            </div>
+            <div className="col-span-12 md:col-span-9">
+              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-4">Nuestro Proceso</h2>
+              <p className="text-sm uppercase tracking-widest text-gray-600 font-light">
+                Metodología estructurada para resultados óptimos
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-12 gap-8">
+            <div className="col-span-12 md:col-span-4 relative">
+              <div className="border-l-2 border-sky-600 pl-6 h-full">
+                <div className="flex items-start mb-4">
+                  <FileText className="h-6 w-6 text-sky-600 mr-3" />
+                  <div>
+                    <h3 className="text-xl font-normal uppercase tracking-wide">Recopilación</h3>
+                    <p className="text-sm text-gray-600 uppercase tracking-wider">Documentación y análisis inicial</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 font-light">
+                  Recopilamos y analizamos toda la documentación relevante para entender la estructura legal, operativa
+                  y financiera del condominio.
+                </p>
+              </div>
+              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-sky-600"></div>
+            </div>
+
+            <div className="col-span-12 md:col-span-4 relative">
+              <div className="border-l-2 border-sky-600 pl-6 h-full">
+                <div className="flex items-start mb-4">
+                  <ClipboardCheck className="h-6 w-6 text-sky-600 mr-3" />
+                  <div>
+                    <h3 className="text-xl font-normal uppercase tracking-wide">Evaluación</h3>
+                    <p className="text-sm text-gray-600 uppercase tracking-wider">Inspección y diagnóstico</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 font-light">
+                  Realizamos una inspección detallada de las instalaciones, infraestructura y procesos operativos para
+                  identificar fortalezas y áreas de oportunidad.
+                </p>
+              </div>
+              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-sky-600"></div>
+            </div>
+
+            <div className="col-span-12 md:col-span-4 relative">
+              <div className="border-l-2 border-sky-600 pl-6 h-full">
+                <div className="flex items-start mb-4">
+                  <Settings className="h-6 w-6 text-sky-600 mr-3" />
+                  <div>
+                    <h3 className="text-xl font-normal uppercase tracking-wide">Recomendaciones</h3>
+                    <p className="text-sm text-gray-600 uppercase tracking-wider">Plan de acción personalizado</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 font-light">
+                  Desarrollamos un plan detallado con recomendaciones específicas para optimizar la operación,
+                  mantenimiento y gestión del condominio.
+                </p>
+              </div>
+              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-sky-600"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* First CTA section with Swiss design */}
+      <section className="w-full bg-sky-800 py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-12">
+            <div className="col-span-12 md:col-span-8 md:col-start-3 text-center">
+              <div className="h-[2px] w-16 bg-sky-600 mb-8 mx-auto"></div>
+              <p className="text-2xl md:text-3xl font-light text-white mb-10">
+                Nuestra prioridad es optimizar la gestión de su condominio.
+              </p>
+              <a
+                href="/contact"
+                className="inline-flex items-center border border-white px-8 py-3 text-white uppercase hover:bg-sky-600 hover:border-sky-600 transition-colors group"
+              >
+                <span className="mr-2">Contáctanos</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Documentos Requeridos section with Swiss design */}
+      <section className="w-full bg-white py-24">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-12 gap-4 mb-16">
+            <div className="col-span-12 md:col-span-3 flex items-start">
+              <span className="text-6xl font-light text-sky-600 mr-4">04</span>
+              <div className="h-[1px] w-full bg-black mt-6"></div>
+            </div>
+            <div className="col-span-12 md:col-span-9">
+              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-4">Documentos Requeridos</h2>
+              <p className="text-sm uppercase tracking-widest text-gray-600 font-light">
+                Información necesaria para un análisis completo
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-12 gap-8">
+            <div className="col-span-12 md:col-span-6 lg:col-span-3 relative">
+              <div className="border-t-2 border-sky-600 pt-6">
+                <h3 className="text-xl font-normal uppercase tracking-wide mb-6">Documentación Legal</h3>
+                <ul className="space-y-3">
+                  {[
+                    "Régimen de Propiedad",
+                    "Reglamento Interior",
+                    "Reglamento de Construcción",
+                    "Actas de Asamblea",
+                    "Acta Constitutiva de la AC",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="absolute top-0 right-0 w-4 h-4 border border-black"></div>
+            </div>
+
+            <div className="col-span-12 md:col-span-6 lg:col-span-3 relative">
+              <div className="border-t-2 border-sky-600 pt-6">
+                <h3 className="text-xl font-normal uppercase tracking-wide mb-6">Permisos y Concesiones</h3>
+                <ul className="space-y-3">
+                  {[
+                    "Manifestación de Impacto Ambiental (MIA)",
+                    "Concesión de Zona Federal",
+                    "Concesión de CNA",
+                    "Reportes a PROFEPA",
+                    "Pagos a ZOFEMAT",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="absolute top-0 right-0 w-4 h-4 border border-black"></div>
+            </div>
+
+            <div className="col-span-12 md:col-span-6 lg:col-span-3 relative">
+              <div className="border-t-2 border-sky-600 pt-6">
+                <h3 className="text-xl font-normal uppercase tracking-wide mb-6">Documentación Técnica</h3>
+                <ul className="space-y-3">
+                  {[
+                    "Planos de infraestructura general",
+                    "Proyecto y plano de áreas verdes",
+                    "Programa de operación de planta de tratamiento",
+                    "Garantías (estructuras, equipamiento, etc.)",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="absolute top-0 right-0 w-4 h-4 border border-black"></div>
+            </div>
+
+            <div className="col-span-12 md:col-span-6 lg:col-span-3 relative">
+              <div className="border-t-2 border-sky-600 pt-6">
+                <h3 className="text-xl font-normal uppercase tracking-wide mb-6">Documentación Administrativa</h3>
+                <ul className="space-y-3">
+                  {[
+                    "Auditorías previas",
+                    "Presupuesto del año actual",
+                    "Reportes mensuales del Administrador",
+                    "Pólizas de mantenimiento",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="absolute top-0 right-0 w-4 h-4 border border-black"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Second CTA section with Swiss design */}
+      <section className="w-full relative h-[60vh] overflow-hidden">
+        <Image src="/assets/image5.jpg" alt="Contáctanos" fill className="object-cover grayscale-[70%]" priority />
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        {/* Swiss design grid overlay */}
+        <div className="absolute inset-0 grid grid-cols-12 pointer-events-none">
+          <div className="col-span-1 h-full border-l border-white/10"></div>
+          <div className="col-span-1 col-start-5 h-full border-l border-white/10"></div>
+          <div className="col-span-1 col-start-9 h-full border-l border-white/10"></div>
+        </div>
+
+        {/* Content container */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-12">
+              <div className="col-span-12 md:col-span-8 md:col-start-3 text-center">
+                <div className="h-[2px] w-16 bg-sky-600 mb-8 mx-auto"></div>
+                <p className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-10 max-w-3xl mx-auto">
+                  Contáctenos hoy mismo para programar una consultoría inicial
+                </p>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center border border-white px-8 py-3 text-white uppercase hover:bg-sky-600 hover:border-sky-600 transition-colors group"
+                >
+                  <span className="mr-2">Solicitar información</span>
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom grid line */}
+        <div className="absolute bottom-8 left-0 right-0 px-6">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-12">
+              <div className="col-span-1 col-start-1">
+                <div className="w-6 h-6 border border-white"></div>
+              </div>
+              <div className="col-span-3 col-start-9 h-[1px] bg-white/30"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact section */}
+      <Contact />
+    </main>
+  )
+}

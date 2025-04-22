@@ -1,233 +1,272 @@
-"use client";
-import { Cross, DollarSign, Mail, Phone, X } from "lucide-react";
-import { Madimi_One } from "next/font/google";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import zenScroll from "zenscroll";
+"use client"
+import { X } from "lucide-react"
+import Image from "next/image"
+import { useEffect, useState } from "react"
+import zenScroll from "zenscroll"
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    zenScroll.setup(500, 100);
+    zenScroll.setup(500, 100)
     const handleScroll = () => {
-      const scrolled = window.scrollY > 100;
-      setIsScrolled(scrolled);
+      const scrolled = window.scrollY > 100
+      setIsScrolled(scrolled)
 
-      if (!scrolled) {
-        document.getElementById("menu").style.right = "-600px";
-        setIsOpen(false);
+      if (!scrolled && isOpen) {
+        setIsOpen(false)
       }
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [isOpen])
 
   function handleMenu() {
-    const menu = document.getElementById("menu");
-    if (isOpen) {
-      menu.style.right = "-600px";
-    } else {
-      menu.style.right = "0px";
-    }
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)
   }
 
   return (
     <div>
       {/* Initial header (shown at top of page) */}
-      <div className="absolute w-full h-[120px] z-10 flex justify-center">
-        <div className="w-[80%] flex justify-between max-md:w-[90%]">
-          <div>
-            <div className="overflow-hidden w-[170px] h-[110px] py-[5px]">
-              <a href="/">
-                <Image
-                  className="object-cover select-none overflow-hidden"
-                  src="/assets/logo-navbar2.png"
-                  alt="hero-logo"
-                  width={800}
-                  height={800}
+      <div className="absolute w-full z-20">
+        <div className="container mx-auto px-6 py-6">
+          <div className="grid grid-cols-12 items-center">
+            {/* Logo */}
+            <div className="col-span-4 md:col-span-3">
+              <a href="/" className="block w-[180px] h-[120px] relative">
+                <Image src="/assets/logo-navbar2.png" alt="Bahía Connect" fill className="object-contain" priority />
+              </a>
+            </div>
+
+            {/* Navigation */}
+            <div className="col-span-8 md:col-span-9 flex justify-end items-center">
+              <nav className="hidden md:flex space-x-8">
+                <a
+                  href="/consultoria"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Consultoría
+                </a>
+                <a
+                  href="/services"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Servicios
+                </a>
+                <a
+                  href="/about"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Nosotros
+                </a>
+                <a
+                  href="/blogs"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Blogs
+                </a>
+                <a
+                  href="/contact"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Contacto
+                </a>
+              </nav>
+
+              {/* Mobile menu button */}
+              <button
+                className="md:hidden relative z-30 w-10 h-10 flex flex-col justify-center items-center"
+                onClick={handleMenu}
+                aria-label="Toggle menu"
+              >
+                <span
+                  className={`block w-6 h-[2px] bg-white transition-all duration-300 ${
+                    isOpen ? "rotate-45 translate-y-[6px]" : ""
+                  }`}
                 />
-              </a>
+                <span
+                  className={`block w-6 h-[2px] bg-white my-1.5 transition-all duration-300 ${
+                    isOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`block w-6 h-[2px] bg-white transition-all duration-300 ${
+                    isOpen ? "-rotate-45 -translate-y-[6px]" : ""
+                  }`}
+                />
+              </button>
             </div>
-          </div>
-          <div className="flex">
-            <div className="flex gap-5 py-[48px] text-sm text-white max-md:hidden uppercase">
-              <a href="/consultoria">
-                <p>Consultoría</p>
-              </a>
-              <a href="/services">
-                <p>SERVICIOS</p>
-              </a>
-              <a href="/about">
-                <p>NOSOTROS</p>
-              </a>
-              <a href="/blogs">
-                <p>BLOGS</p>
-              </a>
-              <a href="/contact">
-                <p>CONTACTO</p>
-              </a>
-            </div>
-            <button
-              className="hidden relative z-30 flex-col justify-center items-center w-10 h-30 group max-md:flex cursor-pointer"
-              onClick={handleMenu}
-              aria-label="Toggle menu"
-            >
-              <span
-                className={`block w-8 h-1 bg-white transition-all duration-300 ${
-                  isOpen ? "rotate-45 translate-y-2" : ""
-                }`}
-              />
-              <span
-                className={`block w-8 h-1 bg-white my-1 transition-all duration-300 ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`block w-8 h-1 bg-white transition-all duration-300 ${
-                  isOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
-              />
-            </button>
           </div>
         </div>
       </div>
 
       {/* Scroll-activated navbar */}
       <div
-        className={`fixed h-[90px] bg-sky-800 w-full transition-transform duration-300 ease-in-out flex justify-between items-center z-20 px-[5%] md:px-[10%] ${
+        className={`fixed w-full bg-sky-800 border-b border-sky-900 z-20 transition-transform duration-300 ease-in-out ${
           isScrolled ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <a href="/">
-          <Image
-            className="object-cover select-none"
-            src="/assets/logo-navbar2.png"
-            alt="navbar-logo"
-            width={120}
-            height={120}
-          />
-        </a>
+        <div className="container mx-auto px-6 py-4">
+          <div className="grid grid-cols-12 items-center">
+            {/* Logo */}
+            <div className="col-span-4 md:col-span-3">
+              <a href="/" className="block w-[120px] h-[70px] relative">
+                <Image src="/assets/logo-navbar2.png" alt="Bahía Connect" fill className="object-contain" priority />
+              </a>
+            </div>
 
-        <button
-          className="relative z-30 flex flex-col justify-center items-center w-10 h-10 group cursor-pointer"
-          onClick={handleMenu}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`block w-8 h-1 bg-sky-50 transition-all duration-300 ${
-              isOpen ? "rotate-45 translate-y-2" : ""
-            }`}
-          />
-          <span
-            className={`block w-8 h-1 bg-sky-50 my-1 transition-all duration-300 ${
-              isOpen ? "opacity-0" : "opacity-100"
-            }`}
-          />
-          <span
-            className={`block w-8 h-1 bg-sky-50 transition-all duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
-          />
-        </button>
+            {/* Navigation */}
+            <div className="col-span-8 md:col-span-9 flex justify-end items-center">
+              <nav className="hidden md:flex space-x-8">
+                <a
+                  href="/consultoria"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Consultoría
+                </a>
+                <a
+                  href="/services"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Servicios
+                </a>
+                <a
+                  href="/about"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Nosotros
+                </a>
+                <a
+                  href="/blogs"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Blogs
+                </a>
+                <a
+                  href="/contact"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Contacto
+                </a>
+              </nav>
+
+              {/* Mobile menu button */}
+              <button
+                className="md:hidden relative z-30 w-10 h-10 flex flex-col justify-center items-center"
+                onClick={handleMenu}
+                aria-label="Toggle menu"
+              >
+                <span
+                  className={`block w-6 h-[2px] bg-white transition-all duration-300 ${
+                    isOpen ? "rotate-45 translate-y-[6px]" : ""
+                  }`}
+                />
+                <span
+                  className={`block w-6 h-[2px] bg-white my-1.5 transition-all duration-300 ${
+                    isOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`block w-6 h-[2px] bg-white transition-all duration-300 ${
+                    isOpen ? "-rotate-45 -translate-y-[6px]" : ""
+                  }`}
+                />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Mobile menu overlay */}
+      <div
+        className={`fixed inset-0 bg-black/50 z-30 transition-opacity duration-300 ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={handleMenu}
+      ></div>
 
       {/* Mobile menu */}
       <div
-        id="menu"
-        className="fixed uppercase text-lg p-10 h-[100vh] w-[400px] max-sm:w-[300px] right-[-600px] bg-sky-700 transition-all duration-200 ease-in-out text-right z-40
-        text-sky-100"
+        className={`fixed top-0 right-0 h-full w-[300px] bg-sky-700 z-40 transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
-        <div className="flex justify-center cursor-pointer">
-          <X
-            onClick={() => {
-              handleMenu();
-            }}
-            className="h-10 w-10"
-          />
-        </div>
-        <div className="text-left text-md py-5 border-b-1">
-          <div className="flex mb-5">
-            <div className="flex-shrink-0">
-              <Phone className="h-5 w-5 mr-4" />
-            </div>
-            <p className="text-sm">(+52) 329 688 5505</p>
+        <div className="p-6 h-full flex flex-col">
+          {/* Close button */}
+          <div className="flex justify-end mb-8">
+            <button onClick={handleMenu} className="p-2" aria-label="Close menu">
+              <X className="h-6 w-6 text-white" />
+            </button>
           </div>
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <Mail className="h-5 w-5 mr-4" />
-            </div>
-            <p className="lowercase text-sm">info@bahiaconnect.com</p>
-          </div>
-        </div>
 
-        <a href="/">
-          <div
-            onClick={() => {
-              handleMenu();
-            }}
-            className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
-          >
-            inicio
+          {/* Logo */}
+          <div className="w-[120px] h-[80px] relative mb-8 mx-auto">
+            <Image src="/assets/logo-navbar2.png" alt="Bahía Connect" fill className="object-contain" />
           </div>
-        </a>
 
-        <a href="/consultoria">
-          <div
-            onClick={() => {
-              handleMenu();
-            }}
-            className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
-          >
-            Consultoría
+          {/* Menu items */}
+          <nav className="flex flex-col space-y-6 items-center text-center">
+            <a
+              href="/"
+              className="text-white text-base uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+              onClick={handleMenu}
+            >
+              Inicio
+            </a>
+            <a
+              href="/consultoria"
+              className="text-white text-base uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+              onClick={handleMenu}
+            >
+              Consultoría
+            </a>
+            <a
+              href="/services"
+              className="text-white text-base uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+              onClick={handleMenu}
+            >
+              Servicios
+            </a>
+            <a
+              href="/about"
+              className="text-white text-base uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+              onClick={handleMenu}
+            >
+              Nosotros
+            </a>
+            <a
+              href="/blogs"
+              className="text-white text-base uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+              onClick={handleMenu}
+            >
+              Blogs
+            </a>
+            <a
+              href="/contact"
+              className="text-white text-base uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+              onClick={handleMenu}
+            >
+              Contacto
+            </a>
+          </nav>
+
+          {/* Contact info */}
+          <div className="mt-auto border-t border-gray-200 pt-6">
+            <div className="text-center">
+              <p className="text-sm text-sky-200 mb-2">(+52) 329 688 5505</p>
+              <p className="text-sm text-sky-200 lowercase">info@bahiaconnect.com</p>
+            </div>
           </div>
-        </a>
-        <a href="/services">
-          <div
-            onClick={() => {
-              handleMenu();
-            }}
-            className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
-          >
-            servicios
-          </div>
-        </a>
-        <a href="/about">
-          <div
-            onClick={() => {
-              handleMenu();
-            }}
-            className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
-          >
-            nosotros
-          </div>
-        </a>
-        <a href="/blogs">
-          <div
-            onClick={() => {
-              handleMenu();
-            }}
-            className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
-          >
-            Blogs
-          </div>
-        </a>
-        <a href="/contact">
-          <div
-            onClick={() => {
-              handleMenu();
-            }}
-            className="my-10 cursor-pointer hover:text-sky-500 transition-colors duration-200"
-          >
-            contacto
-          </div>
-        </a>
+
+          {/* Swiss design element */}
+          <div className="absolute bottom-6 left-6 w-6 h-6 bg-sky-600"></div>
+          <div className="absolute bottom-6 right-6 w-6 h-6 border border-white"></div>
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

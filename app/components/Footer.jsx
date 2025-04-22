@@ -1,73 +1,142 @@
-import { Mail, Phone } from "lucide-react";
-import Image from "next/image";
-import React from "react";
+import { Mail, Phone } from "lucide-react"
+import Image from "next/image"
 
 const Footer = () => {
   return (
-    <div className="w-full flex justify-center bg-sky-800 text-sky-50">
-      <div className="w-[80%]">
-        <div className="flex justify-between py-[20px]">
-          <Image
-            src="/assets/logo-white.png"
-            alt="logo-footer"
-            className="object-cover select-none h-[180px] w-[320px]"
-            width={370}
-            height={370}
-          />
-          <div className="w-[50%]">
-            <h2 className="text-lg font-bold text-sky-50">Navegación</h2>
-            <a href="/">
-              <p>Inicio</p>
-            </a>
-            <a href="/consultoria">
-              <p>Consultoría</p>
-            </a>
-            <a href="/services">
-              <p>Servicios</p>
-            </a>
-            <a href="/about">
-              <p>Nosotros</p>
-            </a>
-            <a href="/contact">
-              <p>Contacto</p>
-            </a>
+    <footer className="w-full bg-sky-800 text-white py-16">
+      <div className="container mx-auto px-6">
+        {/* Swiss grid header */}
+        <div className="grid grid-cols-12 gap-4 mb-12">
+          <div className="col-span-12 md:col-span-3 flex items-start">
+            <div className="h-[2px] w-full bg-sky-600 mt-4"></div>
+          </div>
+          <div className="col-span-12 md:col-span-9 mt-6 md:mt-0">
+            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-white uppercase">Bahía Connect</h2>
           </div>
         </div>
-        <div className="w-full  text-xs ">
-          <div className="text-left text-md flex py-2">
-            <div className="flex mr-5">
-              <div className="flex-shrink-0">
-                <Phone className="h-4 w-4 mr-2" />
-              </div>
-              <p className="text-md">(+52) 329 688 5505</p>
+
+        {/* Main footer content */}
+        <div className="grid grid-cols-12 gap-8">
+          {/* Logo column */}
+          <div className="col-span-12 md:col-span-4 relative">
+            <div className="relative h-[120px] w-[220px]">
+              <Image src="/assets/logo-white.png" alt="Bahía Connect" fill className="object-contain object-left" />
             </div>
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <Mail className="h-4 w-4 mr-2" />
+            {/* Swiss design element */}
+            <div className="absolute -bottom-4 -left-4 w-12 h-12 border border-sky-600 hidden md:block"></div>
+          </div>
+
+          {/* Navigation column */}
+          <div className="col-span-6 md:col-span-4">
+            <h3 className="text-base font-normal uppercase tracking-wide mb-6 border-b border-sky-600 pb-2 inline-block">
+              Navegación
+            </h3>
+            <nav className="space-y-3">
+              <a href="/" className="block text-sm font-light hover:text-sky-600 transition-colors">
+                Inicio
+              </a>
+              <a href="/consultoria" className="block text-sm font-light hover:text-sky-600 transition-colors">
+                Consultoría
+              </a>
+              <a href="/services" className="block text-sm font-light hover:text-sky-600 transition-colors">
+                Servicios
+              </a>
+              <a href="/about" className="block text-sm font-light hover:text-sky-600 transition-colors">
+                Nosotros
+              </a>
+              <a href="/contact" className="block text-sm font-light hover:text-sky-600 transition-colors">
+                Contacto
+              </a>
+            </nav>
+          </div>
+
+          {/* Contact column */}
+          <div className="col-span-6 md:col-span-4">
+            <h3 className="text-base font-normal uppercase tracking-wide mb-6 border-b border-sky-600 pb-2 inline-block">
+              Contacto
+            </h3>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-3 text-sky-600" />
+                <p className="text-sm font-light">(+52) 329 688 5505</p>
               </div>
-              <p className="lowercase">info@bahiaconnect.com</p>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-3 text-sky-600" />
+                <p className="text-sm font-light lowercase">info@bahiaconnect.com</p>
+              </div>
+            </div>
+
+            {/* Social links */}
+            <div className="mt-8">
+              <h4 className="text-sm uppercase tracking-wider mb-4 font-light">Síguenos</h4>
+              <div className="flex space-x-6">
+                <a
+                  href="#"
+                  className="border border-white w-10 h-10 flex items-center justify-center hover:border-sky-600 hover:bg-sky-600 transition-colors"
+                >
+                  <span className="sr-only">Facebook</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="border border-white w-10 h-10 flex items-center justify-center hover:border-sky-600 hover:bg-sky-600 transition-colors"
+                >
+                  <span className="sr-only">Instagram</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div className="flex pb-2">
-            <a href="/contact">
-              <p className="mr-4">Contacto</p>
-            </a>
-            <a href="#">
-              <p className="mr-4">Facebook</p>
-            </a>
-            <a href="#">
-              <p>Instagram</p>
-            </a>
+        </div>
+
+        {/* Swiss design line */}
+        <div className="grid grid-cols-12 mt-16">
+          <div className="col-span-1 col-start-1">
+            <div className="w-6 h-6 bg-sky-600"></div>
           </div>
-          <div className="py-[30px] border-t-[1px]">
-            <p>
-              Copyright © 2025. Todos los derechos reservados. Bahia Connect
-            </p>
+          <div className="col-span-10 col-start-2">
+            <div className="h-[1px] w-full bg-white/20"></div>
           </div>
+          <div className="col-span-1 col-start-12">
+            <div className="w-6 h-6 border border-white"></div>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-8 text-center">
+          <p className="text-xs font-light text-white/70">
+            Copyright © {new Date().getFullYear()}. Todos los derechos reservados. Bahía Connect
+          </p>
         </div>
       </div>
-    </div>
-  );
-};
+    </footer>
+  )
+}
 
-export default Footer;
+export default Footer

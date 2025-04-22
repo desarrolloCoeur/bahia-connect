@@ -1,115 +1,100 @@
-import React from "react";
-import {
-  Building2,
-  Home,
-  Shield,
-  DollarSign,
-  PenToolIcon as Tool,
-} from "lucide-react";
+import { Building2, Home, DollarSign, PenToolIcon as Tool } from "lucide-react"
 
 const Services = () => {
   return (
-    <div className="w-full flex justify-center bg-sky-50">
-      <div className="w-[65%] my-[150px] max-md:w-[90%]">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl text-sky-950 tracking-tighter sm:text-4xl md:text-5xl uppercase font-light">
-            Nuestros Servicios
-          </h2>
-          <p className="mt-4 text-sky-800 uppercase tracking-wide">
-            Ofrecemos una amplia gama de servicios adaptados a tus necesidades
-          </p>
+    <div className="w-full bg-white py-24">
+      <div className="container mx-auto px-6">        
+        <div className="grid grid-cols-12 gap-4 mb-20">
+          <div className="col-span-12 md:col-span-3 flex items-start">
+            <span className="text-6xl font-light text-sky-600 mr-4">02</span>
+            <div className="h-[1px] w-full bg-black mt-6"></div>
+          </div>
+          <div className="col-span-12 md:col-span-9">
+            <h2 className="text-3xl font-light tracking-tight text-black mb-4">NUESTROS SERVICIOS</h2>
+            <p className="text-sm uppercase tracking-widest text-gray-600 font-light">
+              Ofrecemos una amplia gama de servicios adaptados a tus necesidades
+            </p>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
-          {/* Servicio 1: Administración de Propiedades */}
-          <div className="flex gap-6">
-            <div className="flex-shrink-0 text-gray-400">
-              <Home className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium uppercase mb-3">
-                Gestión de Mega Proyectos
-              </h3>
-              <p className="text-gray-600">
-                Desde la planificación del BOH, amenidades, hasta la ejecución y
-                monitoreo, asegurando que cada etapa se cumpla según los plazos
-                y presupuestos establecidos.
+        {/* Services grid with Swiss design */}
+        <div className="grid grid-cols-12 gap-y-16 gap-x-8">
+          {/* Service 1 */}
+          <div className="col-span-12 md:col-span-6 lg:col-span-5 md:col-start-2 lg:col-start-2">
+            <div className="flex flex-col">
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 flex items-center justify-center border border-black mr-4">
+                  <Home className="h-5 w-5" />
+                </div>
+                <h3 className="text-base font-normal uppercase tracking-wide">Gestión de Mega Proyectos</h3>
+              </div>
+              <p className="text-gray-700 font-light pl-14">
+                Desde la planificación del BOH, amenidades, hasta la ejecución y monitoreo, asegurando que cada etapa se
+                cumpla según los plazos y presupuestos establecidos.
               </p>
             </div>
           </div>
 
-          {/* Servicio 2: Administración */}
-          <div className="flex gap-6">
-            <div className="flex-shrink-0 text-gray-400">
-              <DollarSign className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium uppercase mb-3">
-                Administración de Condominios y Áreas Comunes
-              </h3>
-              <p className="text-gray-600">
-                Nos encargamos del mantenimiento, la seguridad y el buen
-                funcionamiento de todas las instalaciones comunes, garantizando
-                la calidad de vida de los residentes.
+          {/* Service 2 */}
+          <div className="col-span-12 md:col-span-6 lg:col-span-5">
+            <div className="flex flex-col">
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 flex items-center justify-center border border-black mr-4">
+                  <DollarSign className="h-5 w-5" />
+                </div>
+                <h3 className="text-base font-normal uppercase tracking-wide">Administración de Condominios</h3>
+              </div>
+              <p className="text-gray-700 font-light pl-14">
+                Nos encargamos del mantenimiento, la seguridad y el buen funcionamiento de todas las instalaciones
+                comunes, garantizando la calidad de vida de los residentes.
               </p>
             </div>
           </div>
 
-          {/* Servicio 3: Operación */}
-          <div className="flex gap-6">
-            <div className="flex-shrink-0 text-gray-400">
-              <Tool className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium uppercase mb-3">
-                Asociaciones Civiles
-              </h3>
-              <p className="text-gray-600">
-                Gestión eficiente y organizada de asociaciones, asegurando su
-                buen funcionamiento y el cumplimiento de normativas legales.
+          {/* Service 3 */}
+          <div className="col-span-12 md:col-span-6 lg:col-span-5 md:col-start-2 lg:col-start-2">
+            <div className="flex flex-col">
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 flex items-center justify-center border border-black mr-4">
+                  <Tool className="h-5 w-5" />
+                </div>
+                <h3 className="text-base font-normal uppercase tracking-wide">Asociaciones Civiles</h3>
+              </div>
+              <p className="text-gray-700 font-light pl-14">
+                Gestión eficiente y organizada de asociaciones, asegurando su buen funcionamiento y el cumplimiento de
+                normativas legales.
               </p>
             </div>
           </div>
 
-          {/* Servicio 4: Mantenimiento */}
-          <div className="flex gap-6">
-            <div className="flex-shrink-0 text-gray-400">
-              <Building2 className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium uppercase mb-3">
-                Unidades Residenciales
-              </h3>
-              <p className="text-gray-600">
-                Administración completa de propiedades residenciales, desde el
-                alquiler hasta el mantenimiento diario.
+          {/* Service 4 */}
+          <div className="col-span-12 md:col-span-6 lg:col-span-5">
+            <div className="flex flex-col">
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 flex items-center justify-center border border-black mr-4">
+                  <Building2 className="h-5 w-5" />
+                </div>
+                <h3 className="text-base font-normal uppercase tracking-wide">Unidades Residenciales</h3>
+              </div>
+              <p className="text-gray-700 font-light pl-14">
+                Administración completa de propiedades residenciales, desde el alquiler hasta el mantenimiento diario.
               </p>
             </div>
           </div>
+        </div>
 
-          {/* Servicio 6: Reportes Financieros */}
-          {/* <div className="flex gap-6">
-            <div className="flex-shrink-0 text-gray-400">
-              <BarChart className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium uppercase mb-3">
-                Reportes Financieros
-              </h3>
-              <p className="text-gray-600">
-                Proporcionamos informes financieros detallados y transparentes
-                que permiten a los propietarios y a la administración tomar
-                decisiones informadas. Nuestros reportes incluyen balances
-                mensuales, control de gastos, presupuestos anuales y
-                proyecciones financieras, todo accesible a través de nuestra
-                plataforma digital.
-              </p>
-            </div>
-          </div> */}
+        {/* Swiss design geometric element */}
+        <div className="grid grid-cols-12 mt-20">
+          <div className="col-span-12 md:col-span-9 md:col-start-4">
+            <div className="h-[1px] w-full bg-black"></div>
+          </div>
+          <div className="hidden md:block md:col-span-1 md:col-start-12">
+            <div className="w-6 h-6 bg-sky-600 ml-4"></div>
+          </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
