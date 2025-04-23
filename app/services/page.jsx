@@ -91,10 +91,11 @@ export default function ServicesPage() {
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-lg font-light leading-relaxed">
-                Durante 18 años, hemos realizado gestión de propiedades y
-                consultoría en Punta Mita, siempre buscando adaptarnos a las
-                necesidades de los clientes para ofrecer servicios
-                excepcionales.
+                Con más de 23 años en el sector de la región de Bahía de
+                Banderas, hemos gestionado con éxito múltiples proyectos de gran
+                escala, desde Punta Mita y sus alrededores hasta Costa Norte de
+                Nayarit, Sierra Madre y Costa Alegre de Jalisco, siempre
+                enfocándonos en los resultados.
               </p>
             </div>
           </div>
