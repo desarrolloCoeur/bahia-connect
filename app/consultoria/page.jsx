@@ -303,9 +303,10 @@ export default function ConsultoriaPage() {
                 </h3>
                 <ul className="space-y-3">
                   {[
+                    "Pólizas de mantenimiento",
                     "Planos de infraestructura general",
                     "Proyecto y plano de áreas verdes",
-                    "Programa de operación de planta de tratamiento",
+                    "Programa de Operación y Mantenimiento de Plantas y/o Equipos existentes",
                     "Garantías (estructuras, equipamiento, etc.)",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
@@ -327,8 +328,7 @@ export default function ConsultoriaPage() {
                   {[
                     "Auditorías previas",
                     "Presupuesto del año actual",
-                    "Reportes mensuales del Administrador",
-                    "Pólizas de mantenimiento",
+                    "Reportes mensuales del Administrador",                    
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>

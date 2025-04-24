@@ -196,12 +196,11 @@ export default function Home() {
           <div className="grid grid-cols-12 gap-8">
             {/* Section number */}
             <div className="col-span-12 md:col-span-2 flex items-start">
-              <span className="text-6xl font-light text-sky-600">04</span>
+              <span className="text-6xl font-light text-sky-600">05</span>
             </div>
 
             {/* Content area */}
-            <div className="col-span-12 md:col-span-8">
-              {/* Logo with Swiss design treatment */}
+            <div className="col-span-12 md:col-span-8">              
               <div className="mb-12 relative">
                 <div className="w-[180px] h-[180px] relative mx-auto md:mx-0">
                   <Image
@@ -213,8 +212,7 @@ export default function Home() {
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-16 h-16 border border-white/30 hidden md:block"></div>
               </div>
-
-              {/* Quote with Swiss typography */}
+              
               <div className="relative">
                 <div className="h-[2px] w-16 bg-sky-600 mb-8 hidden md:block"></div>
                 <p className="text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed md:leading-relaxed lg:leading-relaxed max-w-3xl">
@@ -233,8 +231,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-sky-600/20 mt-24"></div>
             </div>
           </div>
-
-          {/* Bottom Swiss design element */}
+          
           <div className="grid grid-cols-12 mt-16">
             <div className="col-span-3 col-start-2 h-[1px] bg-white/20"></div>
             <div className="col-span-1 col-start-11">

@@ -94,7 +94,7 @@ const Blogs = () => {
       <div className="container mx-auto px-6">        
         <div className="grid grid-cols-12 gap-4 mb-20">
           <div className="col-span-12 md:col-span-3 flex items-start">
-            <span className="text-6xl font-light text-sky-600 mr-4">03</span>
+            <span className="text-6xl font-light text-sky-600 mr-4">04</span>
             <div className="h-[1px] w-full bg-black mt-6"></div>
           </div>
           <div className="col-span-12 md:col-span-9">

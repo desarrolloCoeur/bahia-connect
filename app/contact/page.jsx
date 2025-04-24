@@ -1,7 +1,7 @@
-"use client"
-import Image from "next/image"
-import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+"use client";
+import Image from "next/image";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 export default function ContactPage() {
   const [details, setDetails] = useState({
@@ -9,28 +9,33 @@ export default function ContactPage() {
     phone: "",
     email: "",
     message: "",
-  })
+  });
 
-  const [success, setSuccess] = useState(null)
-  const [val, setVal] = useState(null)
-  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(null);
+  const [val, setVal] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
-    const { name, value } = event.target
-    setDetails((prev) => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = event.target;
+    setDetails((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (details.name === "" || details.phone === "" || details.message === "" || details.email === "") {
-      setVal(true)
-      setSuccess(false)
-      return
+    if (
+      details.name === "" ||
+      details.phone === "" ||
+      details.message === "" ||
+      details.email === ""
+    ) {
+      setVal(true);
+      setSuccess(false);
+      return;
     }
 
-    setVal(false)
-    setLoading(true)
+    setVal(false);
+    setLoading(true);
 
     try {
       const response = await fetch("/api/send-email", {
@@ -39,43 +44,61 @@ export default function ContactPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(details),
-      })
+      });
 
       if (response.ok) {
-        setSuccess(true)
+        setSuccess(true);
         setDetails({
           name: "",
           phone: "",
           email: "",
           message: "",
-        })
+        });
       } else {
-        setSuccess(false)
+        setSuccess(false);
       }
     } catch (error) {
-      console.error("Error sending email:", error)
-      setSuccess(false)
+      console.error("Error sending email:", error);
+      setSuccess(false);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const renderMessage = () => {
     if (success) {
-      return <p className="text-sm font-light">Tu mensaje ha sido enviado. Nos comunicaremos contigo pronto.</p>
+      return (
+        <p className="text-sm font-light">
+          Tu mensaje ha sido enviado. Nos comunicaremos contigo pronto.
+        </p>
+      );
     } else if (val) {
-      return <p className="text-sm font-light text-sky-600">Favor de llenar la información correspondiente</p>
+      return (
+        <p className="text-sm font-light text-sky-600">
+          Favor de llenar la información correspondiente
+        </p>
+      );
     } else if (success === false) {
-      return <p className="text-sm font-light text-sky-600">Hubo un error al enviar tu mensaje. Intenta nuevamente.</p>
+      return (
+        <p className="text-sm font-light text-sky-600">
+          Hubo un error al enviar tu mensaje. Intenta nuevamente.
+        </p>
+      );
     }
-    return null
-  }
+    return null;
+  };
 
   return (
     <main>
       {/* Hero section with Swiss design */}
       <div className="relative h-[500px] w-full overflow-hidden">
-        <Image src="/assets/image6.jpg" alt="Contacto" fill className="object-cover grayscale-[70%]" priority />
+        <Image
+          src="/assets/image6.jpg"
+          alt="Contacto"
+          fill
+          className="object-cover grayscale-[70%]"
+          priority
+        />
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Swiss design grid overlay */}
@@ -127,15 +150,24 @@ export default function ContactPage() {
             {/* Form column */}
             <div className="col-span-12 lg:col-span-6 relative">
               <div className="flex items-start mb-10">
-                <span className="text-6xl font-light text-sky-600 mr-4">01</span>
+                <span className="text-6xl font-light text-sky-600 mr-4">
+                  01
+                </span>
                 <div className="h-[1px] w-full bg-black mt-6"></div>
               </div>
-              <h2 className="text-3xl font-light tracking-tight uppercase mb-6">Déjanos tu información</h2>
-              <p className="text-gray-600 font-light mb-10">Nos pondremos en contacto contigo</p>
+              <h2 className="text-3xl font-light tracking-tight uppercase mb-6">
+                Déjanos tu información
+              </h2>
+              <p className="text-gray-600 font-light mb-10">
+                Nos pondremos en contacto contigo
+              </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-1">
-                  <label htmlFor="name" className="text-xs uppercase tracking-wider font-light">
+                  <label
+                    htmlFor="name"
+                    className="text-xs uppercase tracking-wider font-light"
+                  >
                     Nombre completo
                   </label>
                   <input
@@ -150,7 +182,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label htmlFor="phone" className="text-xs uppercase tracking-wider font-light">
+                  <label
+                    htmlFor="phone"
+                    className="text-xs uppercase tracking-wider font-light"
+                  >
                     Tel. Celular
                   </label>
                   <input
@@ -166,7 +201,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label htmlFor="email" className="text-xs uppercase tracking-wider font-light">
+                  <label
+                    htmlFor="email"
+                    className="text-xs uppercase tracking-wider font-light"
+                  >
                     Email
                   </label>
                   <input
@@ -181,7 +219,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label htmlFor="message" className="text-xs uppercase tracking-wider font-light">
+                  <label
+                    htmlFor="message"
+                    className="text-xs uppercase tracking-wider font-light"
+                  >
                     Mensaje
                   </label>
                   <textarea
@@ -193,6 +234,12 @@ export default function ContactPage() {
                     required
                   />
                 </div>
+                <a
+                  href="/policy"
+                  className="text-sky-800 hover:text-sky-600 mx-2 text-sm"
+                >
+                  Aviso de Privacidad
+                </a>
 
                 <div className="pt-4">
                   <button
@@ -241,7 +288,9 @@ export default function ContactPage() {
               <div className="h-[1px] w-full bg-black mt-6"></div>
             </div>
             <div className="col-span-12 md:col-span-9">
-              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-4">Nuestra Ubicación</h2>
+              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-4">
+                Nuestra Ubicación
+              </h2>
               <p className="text-sm uppercase tracking-widest text-gray-600 font-light">
                 Centro Empresarial Nuevo Vallarta
               </p>
@@ -270,7 +319,9 @@ export default function ContactPage() {
           <div className="grid grid-cols-12 gap-8 mt-16">
             <div className="col-span-12 md:col-span-4">
               <div className="border-l-2 border-sky-600 pl-6">
-                <h3 className="text-xl font-normal uppercase tracking-wide mb-2">Dirección</h3>
+                <h3 className="text-xl font-normal uppercase tracking-wide mb-2">
+                  Dirección
+                </h3>
                 <p className="text-gray-700 font-light">
                   Centro Empresarial Nuevo Vallarta
                   <br />
@@ -280,19 +331,25 @@ export default function ContactPage() {
             </div>
             <div className="col-span-12 md:col-span-4">
               <div className="border-l-2 border-sky-600 pl-6">
-                <h3 className="text-xl font-normal uppercase tracking-wide mb-2">Teléfono</h3>
+                <h3 className="text-xl font-normal uppercase tracking-wide mb-2">
+                  Teléfono
+                </h3>
                 <p className="text-gray-700 font-light">(+52) 329 688 5505</p>
               </div>
             </div>
             <div className="col-span-12 md:col-span-4">
               <div className="border-l-2 border-sky-600 pl-6">
-                <h3 className="text-xl font-normal uppercase tracking-wide mb-2">Email</h3>
-                <p className="text-gray-700 font-light lowercase">info@bahiaconnect.com</p>
+                <h3 className="text-xl font-normal uppercase tracking-wide mb-2">
+                  Email
+                </h3>
+                <p className="text-gray-700 font-light lowercase">
+                  info@bahiaconnect.com
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const Consultoria = () => {
   return (
@@ -33,16 +33,19 @@ const Consultoria = () => {
           </div>
 
           {/* Middle column - content */}
-          <div className="col-span-12 md:col-span-10 space-y-8">
+          <div className="col-span-12 md:col-span-12 space-y-8">
             <div className="flex items-center">
-              <span className="text-3xl font-light text-sky-600 mr-4">01.5</span>
+              <span className="text-6xl font-light text-sky-600 mr-4">02</span>
               <div className="h-[1px] w-24 bg-white/50"></div>
             </div>
 
-            <h2 className="text-5xl md:text-7xl font-light tracking-tight text-white uppercase">Consultoría 360°</h2>
+            <h2 className="text-5xl md:text-7xl font-light tracking-tight text-white uppercase">
+              Consultoría 360°
+            </h2>
 
             <p className="text-xl text-gray-200 max-w-2xl font-light">
-              El objetivo es ayudarte a hacer tu proyecto más eficiente, rentable y sostenible a largo plazo.
+              El objetivo es ayudarte a que la realización de tu proyecto sea
+              más eficiente, rentable y sostenible a largo plazo.
             </p>
 
             <div className="pt-6">
@@ -50,7 +53,9 @@ const Consultoria = () => {
                 href="https://wa.me/+523221086381?text=Hola,%20Me%20gustaria%20saber%20mas%20de%20su%20servicio%20de%20consultoria."
                 className="inline-flex items-center group border border-white px-6 py-3 hover:bg-sky-600 hover:border-sky-600 transition-colors duration-300"
               >
-                <span className="mr-4 text-sm font-normal text-white">Solicitar Consultoria</span>
+                <span className="mr-4 text-sm font-normal text-white">
+                  Solicitar Consultoria
+                </span>
                 <ArrowRight className="h-4 w-4 text-white transition-all group-hover:translate-x-1" />
               </a>
             </div>
@@ -73,7 +78,7 @@ const Consultoria = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Consultoria
+export default Consultoria;

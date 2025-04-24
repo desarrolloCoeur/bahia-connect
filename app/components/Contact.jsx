@@ -1,6 +1,6 @@
-"use client"
-import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+"use client";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 const Contact = () => {
   const [details, setDetails] = useState({
@@ -8,28 +8,33 @@ const Contact = () => {
     phone: "",
     email: "",
     message: "",
-  })
+  });
 
-  const [success, setSuccess] = useState(null)
-  const [val, setVal] = useState(null)
-  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(null);
+  const [val, setVal] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
-    const { name, value } = event.target
-    setDetails((prev) => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = event.target;
+    setDetails((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (details.name === "" || details.phone === "" || details.message === "" || details.email === "") {
-      setVal(true)
-      setSuccess(false)
-      return
+    if (
+      details.name === "" ||
+      details.phone === "" ||
+      details.message === "" ||
+      details.email === ""
+    ) {
+      setVal(true);
+      setSuccess(false);
+      return;
     }
 
-    setVal(false)
-    setLoading(true)
+    setVal(false);
+    setLoading(true);
 
     try {
       const response = await fetch("/api/send-email", {
@@ -38,48 +43,62 @@ const Contact = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(details),
-      })
+      });
 
       if (response.ok) {
-        setSuccess(true)
+        setSuccess(true);
         setDetails({
           name: "",
           phone: "",
           email: "",
           message: "",
-        })
+        });
       } else {
-        setSuccess(false)
+        setSuccess(false);
       }
     } catch (error) {
-      console.error("Error sending email:", error)
-      setSuccess(false)
+      console.error("Error sending email:", error);
+      setSuccess(false);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const renderMessage = () => {
     if (success) {
-      return <p className="text-sm font-light">Tu mensaje ha sido enviado. Nos comunicaremos contigo pronto.</p>
+      return (
+        <p className="text-sm font-light">
+          Tu mensaje ha sido enviado. Nos comunicaremos contigo pronto.
+        </p>
+      );
     } else if (val) {
-      return <p className="text-sm font-light text-red-600">Favor de llenar la información correspondiente</p>
+      return (
+        <p className="text-sm font-light text-red-600">
+          Favor de llenar la información correspondiente
+        </p>
+      );
     } else if (success === false) {
-      return <p className="text-sm font-light text-red-600">Hubo un error al enviar tu mensaje. Intenta nuevamente.</p>
+      return (
+        <p className="text-sm font-light text-red-600">
+          Hubo un error al enviar tu mensaje. Intenta nuevamente.
+        </p>
+      );
     }
-    return null
-  }
+    return null;
+  };
 
   return (
     <div className="w-full bg-white py-24">
       <div className="container mx-auto px-6">
         {/* Swiss grid header with numbered title */}
         <div className="grid grid-cols-12 gap-4 mb-16">
-          <div className="col-span-12 md:col-span-3 flex items-start">            
+          <div className="col-span-12 md:col-span-3 flex items-start">
             <div className="h-[1px] w-full bg-black mt-6"></div>
           </div>
           <div className="col-span-12 md:col-span-9">
-            <h2 className="text-3xl font-light tracking-tight text-black mb-4">CONTÁCTANOS</h2>
+            <h2 className="text-3xl font-light tracking-tight text-black mb-4">
+              CONTÁCTANOS
+            </h2>
             <p className="text-sm uppercase tracking-widest text-gray-600 font-light">
               Estamos listos para ayudarte con tu proyecto
             </p>
@@ -92,7 +111,10 @@ const Contact = () => {
           <div className="col-span-12 md:col-span-6 md:col-start-2">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-1">
-                <label htmlFor="name" className="text-xs uppercase tracking-wider font-light">
+                <label
+                  htmlFor="name"
+                  className="text-xs uppercase tracking-wider font-light"
+                >
                   Nombre completo
                 </label>
                 <input
@@ -107,7 +129,10 @@ const Contact = () => {
               </div>
 
               <div className="space-y-1">
-                <label htmlFor="phone" className="text-xs uppercase tracking-wider font-light">
+                <label
+                  htmlFor="phone"
+                  className="text-xs uppercase tracking-wider font-light"
+                >
                   Tel. Celular
                 </label>
                 <input
@@ -123,7 +148,10 @@ const Contact = () => {
               </div>
 
               <div className="space-y-1">
-                <label htmlFor="email" className="text-xs uppercase tracking-wider font-light">
+                <label
+                  htmlFor="email"
+                  className="text-xs uppercase tracking-wider font-light"
+                >
                   Email
                 </label>
                 <input
@@ -138,7 +166,10 @@ const Contact = () => {
               </div>
 
               <div className="space-y-1">
-                <label htmlFor="message" className="text-xs uppercase tracking-wider font-light">
+                <label
+                  htmlFor="message"
+                  className="text-xs uppercase tracking-wider font-light"
+                >
                   Mensaje
                 </label>
                 <textarea
@@ -150,7 +181,12 @@ const Contact = () => {
                   required
                 />
               </div>
-
+              <a
+                href="/policy"
+                className="text-sky-800 hover:text-sky-600 mx-2 text-sm"
+              >
+                Aviso de Privacidad
+              </a>
               <div className="pt-4">
                 <button
                   type="submit"
@@ -186,7 +222,9 @@ const Contact = () => {
             </div>
 
             <div className="mt-6">
-              <h3 className="text-base font-normal uppercase tracking-wide mb-2">Nuestra ubicación</h3>
+              <h3 className="text-base font-normal uppercase tracking-wide mb-2">
+                Nuestra ubicación
+              </h3>
               <p className="text-gray-700 font-light">
                 Centro Empresarial Nuevo Vallarta
                 <br />
@@ -210,7 +248,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
