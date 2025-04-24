@@ -21,7 +21,7 @@ export const metadata = {
   description:
     "Expertos en administración de condominios, asociaciones civiles y consultoría 360° en Bahía de Banderas, Nayarit. Más de 23 años de experiencia en gestión de propiedades.",
   keywords:
-    "administración de condominios, gestión de propiedades, Bahía de Banderas, Nayarit, Punta Mita, asociaciones civiles, consultoría inmobiliaria, mantenimiento de propiedades, administración de áreas comunes, servicios inmobiliarios, propiedades vacacionales, inversión inmobiliaria, condominios en playa",
+    " Bahía Connect, bahiaconnect ,administración de condominios, gestión de propiedades, Bahía de Banderas, Nayarit, Punta Mita, asociaciones civiles, consultoría inmobiliaria, mantenimiento de propiedades, administración de áreas comunes, servicios inmobiliarios, propiedades vacacionales, inversión inmobiliaria, condominios en playa",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/logo-dp.png",
