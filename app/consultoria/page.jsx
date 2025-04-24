@@ -303,7 +303,6 @@ export default function ConsultoriaPage() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Estudios de Fondo de Reserva",
                     "Pólizas de mantenimiento",
                     "Planos de infraestructura general",
                     "Proyecto y plano de áreas verdes",
@@ -327,9 +326,10 @@ export default function ConsultoriaPage() {
                 </h3>
                 <ul className="space-y-3">
                   {[
+                    "Estudios de Fondo de Reserva",
                     "Auditorías previas",
                     "Presupuesto del año actual",
-                    "Reportes mensuales del Administrador",                    
+                    "Reportes mensuales del Administrador",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
