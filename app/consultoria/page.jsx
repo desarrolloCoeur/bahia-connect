@@ -303,6 +303,7 @@ export default function ConsultoriaPage() {
                 </h3>
                 <ul className="space-y-3">
                   {[
+                    "Estudios de Fondo de Reserva",
                     "Pólizas de mantenimiento",
                     "Planos de infraestructura general",
                     "Proyecto y plano de áreas verdes",
