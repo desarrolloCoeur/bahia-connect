@@ -102,7 +102,7 @@ export default function Home() {
                 <p className="text-gray-700 font-light">
                   Con más de 23 años en el sector de la región de Bahía de
                   Banderas, hemos gestionado con éxito múltiples proyectos de
-                  gran escala, desde Punta Mita y sus alskyedores hasta Costa
+                  gran escala, desde Punta Mita y sus alrededores hasta Costa
                   Norte de Nayarit, Sierra Madre y Costa Alegre de Jalisco,
                   siempre enfocándonos en los resultados.
                 </p>

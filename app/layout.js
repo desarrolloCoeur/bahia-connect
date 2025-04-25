@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', process.env.GA_ID);
+            gtag('config', 'G-T2LDE068C6');
           `}
         </Script>
       </head>
