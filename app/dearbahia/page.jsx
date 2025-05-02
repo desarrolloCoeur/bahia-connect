@@ -1,23 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
 import Contact from "../components/Contact";
 
 export default function AboutPage() {
   return (
     <main>
       {/* Hero section with Swiss design */}
-      <div className="relative h-[500px] w-full overflow-hidden">
+      <div className="relative h-[600px] w-full overflow-hidden">
         <Image
           src="/assets/hero-dear.jpg"
           alt="Nosotros"
           fill
-          className="object-cover grayscale-[70%]"
+          className="object-cover grayscale-[40%]"
           priority
         />
-        
-        <div className="absolute inset-0 bg-black/50"></div>
+
+        <div className="absolute inset-0 bg-black/30"></div>
 
         {/* Swiss design grid overlay */}
         <div className="absolute inset-0 grid grid-cols-12 pointer-events-none">
@@ -30,19 +29,15 @@ export default function AboutPage() {
         {/* Content container */}
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-12">
-              <div className="col-span-12 md:col-span-8 md:col-start-3">
-                <div className="h-[2px] w-16 bg-sky-600 mb-6"></div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white uppercase mb-4">
-                  Dear bahía
-                </h1>
-                <div className="flex items-center text-sm text-white/80 uppercase tracking-wider font-light">
-                  <a href="/" className="hover:text-sky-600 transition-colors">
-                    Inicio
-                  </a>
-                  <span className="mx-2">/</span>
-                  <span className="text-white">dear bahía</span>
-                </div>
+            <div className="">
+              <div className="w-full justify-center flex">
+                <Image
+                  src="/assets/dear-logo.png"
+                  alt="Logo"
+                  width={500}
+                  height={200}
+                  className="object-contain brightness-85"
+                />
               </div>
             </div>
           </div>
@@ -219,53 +214,78 @@ export default function AboutPage() {
       </section>
 
       {/* CTA section with Swiss design */}
-      <section className="w-full relative h-[60vh] overflow-hidden">
-        <Image
-          src="/assets/playa.jpg"
-          alt="Contáctanos"
-          fill
-          className="object-cover grayscale-[70%]"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/70"></div>
+      <div className="w-full relative overflow-hidden">
+        {/* Background with Swiss design treatment */}
+        <div className="absolute inset-0 grid grid-cols-12">
+          {/* Image container with grayscale effect */}
+          <div className="col-span-12 h-full">
+            <Image
+              src="/assets/playa.jpg"
+              alt="Background image"
+              fill
+              className="object-cover grayscale-[60%]"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/50"></div>
+          </div>
 
-        {/* Swiss design grid overlay */}
-        <div className="absolute inset-0 grid grid-cols-12 pointer-events-none">
-          <div className="col-span-1 h-full border-l border-white/10"></div>
-          <div className="col-span-1 col-start-5 h-full border-l border-white/10"></div>
-          <div className="col-span-1 col-start-9 h-full border-l border-white/10"></div>
+          {/* Swiss design grid overlay */}
+          <div className="absolute inset-0 grid grid-cols-12 pointer-events-none">
+            <div className="col-span-1 h-full border-l border-white/10"></div>
+            <div className="col-span-1 col-start-5 h-full border-l border-white/10"></div>
+            <div className="col-span-1 col-start-9 h-full border-l border-white/10"></div>
+          </div>
         </div>
 
         {/* Content container */}
-        <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-12">
-              <div className="col-span-12 md:col-span-8 md:col-start-3 text-center">
-                <div className="h-[2px] w-16 bg-sky-600 mb-8 mx-auto"></div>
-                <p className="text-xl md:text-2xl lg:text-3xl font-light text-white mb-10 max-w-3xl mx-auto">
+        <div className="relative z-10 container mx-auto px-6 py-24">
+          <div className="grid grid-cols-12 gap-8">
+            {/* Section number */}
+            <div className="col-span-12 md:col-span-2 flex items-start">
+              <span className="text-6xl font-light text-sky-600">04</span>
+            </div>
+
+            {/* Content area */}
+            <div className="col-span-12 md:col-span-8">
+              <div className="mb-12 relative">
+                <div className="w-[180px] h-[180px] relative mx-auto md:mx-0">
+                  <Image
+                    src="/assets/dear-logo.png"
+                    alt="Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 w-16 h-16 border border-white/30 hidden md:block"></div>
+              </div>
+
+              <div className="relative">
+                <div className="h-[2px] w-16 bg-sky-600 mb-8 hidden md:block"></div>
+                <p className="text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed md:leading-relaxed lg:leading-relaxed max-w-3xl">
                   La bahía nos ha dado mucho, y siempre debemos tener clara la
                   importancia de retribuirle.
-                </p>
-                <p className="text-xl md:text-2xl lg:text-3xl font-light text-sky-400 mb-10 max-w-3xl mx-auto">
-                  Unidos hacemos la diferencia
+                  <br />
+                  <span className="font-normal text-sky-400">
+                    Unidos hacemos la diferencia.
+                  </span>
                 </p>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* Bottom grid line */}
-        <div className="absolute bottom-8 left-0 right-0 px-6">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-12">
-              <div className="col-span-1 col-start-1">
-                <div className="w-6 h-6 border border-white"></div>
-              </div>
-              <div className="col-span-3 col-start-9 h-[1px] bg-white/30"></div>
+            {/* Right column - geometric element */}
+            <div className="hidden md:block md:col-span-2">
+              <div className="w-12 h-12 bg-sky-600/20 mt-24"></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-12 mt-16">
+            <div className="col-span-3 col-start-2 h-[1px] bg-white/20"></div>
+            <div className="col-span-1 col-start-11">
+              <div className="w-4 h-4 border border-white/50"></div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Contact section */}
       <Contact />
