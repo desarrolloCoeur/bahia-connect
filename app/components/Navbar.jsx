@@ -1,30 +1,30 @@
-"use client"
-import { X } from "lucide-react"
-import Image from "next/image"
-import { useEffect, useState } from "react"
-import zenScroll from "zenscroll"
+"use client";
+import { X } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import zenScroll from "zenscroll";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    zenScroll.setup(500, 100)
+    zenScroll.setup(500, 100);
     const handleScroll = () => {
-      const scrolled = window.scrollY > 100
-      setIsScrolled(scrolled)
+      const scrolled = window.scrollY > 100;
+      setIsScrolled(scrolled);
 
       if (!scrolled && isOpen) {
-        setIsOpen(false)
+        setIsOpen(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [isOpen])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
 
   function handleMenu() {
-    setIsOpen(!isOpen)
+    setIsOpen(!isOpen);
   }
 
   return (
@@ -36,13 +36,19 @@ const Navbar = () => {
             {/* Logo */}
             <div className="col-span-4 md:col-span-3">
               <a href="/" className="block w-[150px] h-[90px] relative">
-                <Image src="/assets/logo-navbar2.png" alt="Bahía Connect" fill className="object-contain" priority />
+                <Image
+                  src="/assets/logo-navbar2.png"
+                  alt="Bahía Connect"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </a>
             </div>
 
             {/* Navigation */}
             <div className="col-span-8 md:col-span-9 flex justify-end items-center">
-              <nav className="hidden md:flex space-x-8">
+              <nav className="hidden lg:flex space-x-8">
                 <a
                   href="/consultoria"
                   className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
@@ -73,11 +79,23 @@ const Navbar = () => {
                 >
                   Contacto
                 </a>
+                <a
+                  href="/consultoria"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Consultoría
+                </a>
+                <a
+                  href="/dearbahia"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Dear bahía
+                </a>
               </nav>
 
               {/* Mobile menu button */}
               <button
-                className="md:hidden relative z-30 w-10 h-10 flex flex-col justify-center items-center"
+                className="lg:hidden relative z-30 w-10 h-10 flex flex-col justify-center items-center"
                 onClick={handleMenu}
                 aria-label="Toggle menu"
               >
@@ -113,13 +131,19 @@ const Navbar = () => {
             {/* Logo */}
             <div className="col-span-4 md:col-span-3">
               <a href="/" className="block w-[120px] h-[70px] relative">
-                <Image src="/assets/logo-navbar2.png" alt="Bahía Connect" fill className="object-contain" priority />
+                <Image
+                  src="/assets/logo-navbar2.png"
+                  alt="Bahía Connect"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </a>
             </div>
 
             {/* Navigation */}
             <div className="col-span-8 md:col-span-9 flex justify-end items-center">
-              <nav className="hidden md:flex space-x-8">
+              <nav className="hidden lg:flex space-x-8">
                 <a
                   href="/consultoria"
                   className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
@@ -150,11 +174,17 @@ const Navbar = () => {
                 >
                   Contacto
                 </a>
+                <a
+                  href="/dearbahia"
+                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+                >
+                  Dear bahía
+                </a>
               </nav>
 
               {/* Mobile menu button */}
               <button
-                className="md:hidden relative z-30 w-10 h-10 flex flex-col justify-center items-center"
+                className="lg:hidden relative z-30 w-10 h-10 flex flex-col justify-center items-center"
                 onClick={handleMenu}
                 aria-label="Toggle menu"
               >
@@ -196,14 +226,23 @@ const Navbar = () => {
         <div className="p-6 h-full flex flex-col">
           {/* Close button */}
           <div className="flex justify-end mb-8">
-            <button onClick={handleMenu} className="p-2" aria-label="Close menu">
+            <button
+              onClick={handleMenu}
+              className="p-2"
+              aria-label="Close menu"
+            >
               <X className="h-6 w-6 text-white" />
             </button>
           </div>
 
           {/* Logo */}
           <div className="w-[120px] h-[80px] relative mb-8 mx-auto">
-            <Image src="/assets/logo-navbar2.png" alt="Bahía Connect" fill className="object-contain" />
+            <Image
+              src="/assets/logo-navbar2.png"
+              alt="Bahía Connect"
+              fill
+              className="object-contain"
+            />
           </div>
 
           {/* Menu items */}
@@ -250,13 +289,22 @@ const Navbar = () => {
             >
               Contacto
             </a>
+            <a
+              href="/dearbahia"
+              className="text-white text-base uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
+              onClick={handleMenu}
+            >
+              Dear bahía
+            </a>
           </nav>
 
           {/* Contact info */}
           <div className="mt-auto border-t border-gray-200 pt-6">
             <div className="text-center">
               <p className="text-sm text-sky-200 mb-2">(+52) 329 688 5505</p>
-              <p className="text-sm text-sky-200 lowercase">info@bahiaconnect.com</p>
+              <p className="text-sm text-sky-200 lowercase">
+                info@bahiaconnect.com
+              </p>
             </div>
           </div>
 
@@ -266,7 +314,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
