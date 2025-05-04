@@ -80,12 +80,6 @@ const Navbar = () => {
                   Contacto
                 </a>
                 <a
-                  href="/consultoria"
-                  className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
-                >
-                  Consultoría
-                </a>
-                <a
                   href="/dearbahia"
                   className="text-white text-sm uppercase tracking-wider font-light hover:text-sky-600 transition-colors border-b border-transparent hover:border-sky-600 pb-1"
                 >
