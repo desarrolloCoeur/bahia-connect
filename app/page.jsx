@@ -8,6 +8,7 @@ import Consultoria from "./components/Consultoria";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Blogs from "./components/Blogs";
+import Dear from "./components/Dear";
 
 export default function Home() {
   const [years, setYears] = useState(0);
@@ -167,6 +168,7 @@ export default function Home() {
       </div>
       <Consultoria />
       <Services />
+      <Dear/>
       <Blogs />
       <div className="w-full relative overflow-hidden">
         {/* Background with Swiss design treatment */}
@@ -196,7 +198,7 @@ export default function Home() {
           <div className="grid grid-cols-12 gap-8">
             {/* Section number */}
             <div className="col-span-12 md:col-span-2 flex items-start">
-              <span className="text-6xl font-light text-sky-600">05</span>
+              <span className="text-6xl font-light text-sky-600">06</span>
             </div>
 
             {/* Content area */}

@@ -157,7 +157,7 @@ export default function AboutPage() {
                     Voluntariado
                   </h3>
                   <p className="text-gray-700 font-light">
-                    Organizamos actividades de limpieza en playas y caminos
+                    Contribuimos en actividades de limpieza en playas y caminos
                     costeros, en colaboración con voluntarios locales y
                     visitantes.
                   </p>
