@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="pt-6">
               <a href="https://wa.me/+523221086381?text=Hola,%20Me%20gustaria%20saber%20mas%20de%20su%20servicio%20de%20consultoria." className="inline-flex items-center group">
                 <span className="mr-4 text-sm font-normal border-b border-white pb-1 transition-all text-white group-hover:border-sky-600 group-hover:text-sky-600">
-                  Solicitar Consultoria
+                  Solicitar Consultoría
                 </span>
                 <ArrowRight className="h-4 w-4 text-white transition-all group-hover:translate-x-1 group-hover:text-sky-600" />
               </a>
