@@ -167,7 +167,7 @@ export default function ServicesPage() {
                       "Establecer vínculos profesionales con los propietarios",
                       "Gestión de la administración y cobranza",
                       "Control y administración del presupuesto",
-                      "Auditorias administrativas",
+                      "Auditorías administrativas",
                       "Atención en línea (APP) 24/7",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">

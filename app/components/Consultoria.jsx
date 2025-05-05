@@ -54,7 +54,7 @@ const Consultoria = () => {
                 className="inline-flex items-center group border border-white px-6 py-3 hover:bg-sky-600 hover:border-sky-600 transition-colors duration-300"
               >
                 <span className="mr-4 text-sm font-normal text-white">
-                  Solicitar Consultoria
+                  Solicitar Consultoría
                 </span>
                 <ArrowRight className="h-4 w-4 text-white transition-all group-hover:translate-x-1" />
               </a>
