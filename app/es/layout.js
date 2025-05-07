@@ -1,10 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 // import "./general-sans.css";
-import Navbar from "./es/components/Navbar";
-import Footer from "./es/components/Footer";
-import WhastappButton from "./es/components/WhastappButton";
-import Script from "next/script";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import WhastappButton from "./components/WhastappButton";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,26 +31,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        {/* Google Analytics Script */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-T2LDE068C6"
-        />
-        <Script id="google-analytics-config" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-T2LDE068C6');
-          `}
-        </Script>
-      </head>
+    <html lang="es">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
+        <Footer />
+        <WhastappButton />
       </body>
     </html>
   );
