@@ -14,6 +14,16 @@ export default function BlogsPage() {
   const blogPosts = [
     {
       id: 1,
+      slug: "excelencia-administracion-condominios",
+      title: "Bahía Connect: Excellence in Condominium Management",
+      excerpt:
+        "Comprehensive management of residential and hotel condominiums focused on quality, sustainability, and attention to detail.",
+      date: "2025-06-17",
+      category: "Property Management",
+      img: "/assets/blog/4.jpeg",
+    },
+    {
+      id: 2,
       slug: "potencia-valor-propiedad-consultoria-360",
       title: "Maximize your property value with 360° consulting",
       excerpt:
@@ -23,7 +33,7 @@ export default function BlogsPage() {
       img: "/assets/blog/1.jpg",
     },
     {
-      id: 2,
+      id: 3,
       slug: "administracion-propiedades-inversion-protegida",
       title: "Property management: your year-round protected investment",
       excerpt:
@@ -32,16 +42,17 @@ export default function BlogsPage() {
       category: "Management",
       img: "/assets/blog/2.jpg",
     },
-    {
-      id: 3,
-      slug: "clave-rentabilizar-inversion-sin-estres",
-      title: "Property management: the key to stress-free investment profitability",
-      excerpt:
-        "Turn your vacation property into a profitable asset without complications.",
-      date: "2025-04-10",
-      category: "Profitability",
-      img: "/assets/blog/3.jpg",
-    },
+    // {
+    //   id: 4,
+    //   slug: "clave-rentabilizar-inversion-sin-estres",
+    //   title:
+    //     "Property management: the key to stress-free investment profitability",
+    //   excerpt:
+    //     "Turn your vacation property into a profitable asset without complications.",
+    //   date: "2025-04-10",
+    //   category: "Profitability",
+    //   img: "/assets/blog/3.jpg",
+    // },
   ];
 
   // Format date to display in a more readable format
@@ -85,14 +96,18 @@ export default function BlogsPage() {
                   Blog
                 </h1>
                 <div className="flex items-center text-sm text-white/80 uppercase tracking-wider font-light mb-4">
-                  <a href="/en" className="hover:text-sky-600 transition-colors">
+                  <a
+                    href="/en"
+                    className="hover:text-sky-600 transition-colors"
+                  >
                     Home
                   </a>
                   <span className="mx-2">/</span>
                   <span className="text-white">Blog</span>
                 </div>
                 <p className="text-xl text-white/90 font-light max-w-2xl">
-                  Expert advice for managing and maximizing your property's value
+                  Expert advice for managing and maximizing your property's
+                  value
                 </p>
               </div>
             </div>
@@ -217,7 +232,8 @@ export default function BlogsPage() {
               <div className="col-span-12 md:col-span-8 md:col-start-3 text-center">
                 <div className="h-[2px] w-16 bg-sky-600 mb-8 mx-auto"></div>
                 <p className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-10 max-w-3xl mx-auto">
-                  Our commitment is to provide personalized and professional service
+                  Our commitment is to provide personalized and professional
+                  service
                 </p>
                 <a
                   href="/en/contact"

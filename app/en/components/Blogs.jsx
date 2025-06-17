@@ -23,6 +23,16 @@ const Blogs = () => {
   const blogPosts = [
     {
       id: 1,
+      slug: "excelencia-administracion-condominios",
+      title: "Bahía Connect: Excellence in Condominium Management",
+      excerpt:
+        "Comprehensive management of residential and hotel condominiums focused on quality, sustainability, and attention to detail.",
+      date: "2025-06-17",
+      category: "Property Management",
+      img: "/assets/blog/4.jpeg",
+    },
+    {
+      id: 2,
       slug: "potencia-valor-propiedad-consultoria-360",
       title: "Enhance the value of your property with a 360° consultancy",
       excerpt: "Discover how to make the most of your coastal property with our comprehensive consultancy.",
@@ -31,7 +41,7 @@ const Blogs = () => {
       img: "/assets/blog/1.jpg",
     },
     {
-      id: 2,
+      id: 3,
       slug: "administracion-propiedades-inversion-protegida",
       title: "Property management: your investment protected year-round",
       excerpt: "How to care for your beach property while enjoying the benefits.",
@@ -39,15 +49,15 @@ const Blogs = () => {
       category: "Management",
       img: "/assets/blog/2.jpg",
     },
-    {
-      id: 3,
-      slug: "clave-rentabilizar-inversion-sin-estres",
-      title: "Property management: the key to monetizing your investment stress-free",
-      excerpt: "Turn your vacation property into a profitable asset without complications.",
-      date: "2025-04-10",
-      category: "Profitability",
-      img: "/assets/blog/3.jpg",
-    },
+    // {
+    //   id: 3,
+    //   slug: "clave-rentabilizar-inversion-sin-estres",
+    //   title: "Property management: the key to monetizing your investment stress-free",
+    //   excerpt: "Turn your vacation property into a profitable asset without complications.",
+    //   date: "2025-04-10",
+    //   category: "Profitability",
+    //   img: "/assets/blog/3.jpg",
+    // },
   ]
 
   const handlePrev = () => {

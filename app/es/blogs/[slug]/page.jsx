@@ -19,6 +19,51 @@ export async function generateMetadata({ params }) {
 
 const getBlogPost = (slug) => {
   const blogPosts = {
+    "excelencia-administracion-condominios": {
+      img: "/assets/blog/4.jpeg",
+      img2: "/assets/blog/4.2.jpeg",
+      title: "Bahía Connect: Excelencia en Administración de Condominios",
+      content: `
+    <h2>Nuestra Esencia</h2>
+    <p>Bahía Connect es una empresa mexicana especializada en la administración integral de condominios residenciales y hoteleros con un alto nivel de calidad y atención al detalle. Nuestro compromiso es ofrecer soluciones eficientes y personalizadas que aseguren el óptimo funcionamiento y contribuyan a mantener la valorización de las propiedades que gestionamos.</p>
+
+    <p>Contamos con un equipo multidisciplinario de profesionales altamente capacitados en áreas clave como administración, mantenimiento de áreas comunes, sistemas hidráulicos y eléctricos, seguridad, infraestructura y atención al cliente. Nuestra experiencia nos permite implementar y liderar prácticas operativas y financieras que garantizan la sostenibilidad y el bienestar de las comunidades que servimos.</p>
+
+    <h2>Lo que hacemos</h2>
+
+    <h3>Mantenimiento de Áreas Verdes</h3>
+    <p>Gestionamos más de 18 proyectos donde coordinamos el mantenimiento de jardines en áreas comunes, adaptándonos a las necesidades de cada proyecto. Esto incluye la supervisión de empresas especializadas en jardinería o la formación de equipos multidisciplinarios con personal propio del condominio. Nuestras tareas abarcan desde la poda regular de césped y arbustos hasta el manejo eficiente y automatización del sistema de riego, la fertilización y fumigación adecuada, cuidando el paisajismo y la imagen general de las áreas verdes durante todo el año.</p>
+
+    <h3>Limpieza y Conservación de Áreas Comunes</h3>
+    <p>Contamos con protocolos y procedimientos específicos basados en sistemas de certificaciones en limpieza y mantenimiento de áreas comunes. Los estándares establecidos en las comunidades que atendemos son de alta exigencia y comparables con certificaciones en hoteles de lujo. La formalidad con la que procuramos dar mantenimiento y limpieza de todas las áreas comunes nos permite cuidar la experiencia del cliente y mantener espacios como pasillos, salones y otras zonas compartidas en óptimas condiciones. Esto incluye la limpieza regular, reparaciones menores y la supervisión de sistemas de iluminación y ventilación.</p>
+
+    <h3>Sistemas Hidráulicos y Albercas</h3>
+    <p>Gestionamos el mantenimiento de albercas en más de 140 unidades residenciales y casas club, asegurando la limpieza del agua, el control del pH y la revisión periódica de filtros y sistemas de circulación. También nos encargamos del mantenimiento integral de sistemas hidráulicos, incluyendo redes de distribución de agua, sistemas de riego y estaciones de bombeo.</p>
+
+    <h3>Seguridad y Control de Acceso</h3>
+    <p>Colaboramos con empresas especializadas para implementar sistemas de seguridad eficientes, que incluyen CCTV, centros de control y protocolos de acceso y emergencia. Supervisamos al personal de seguridad, ya sea propio o de terceros, y desarrollamos organigramas y órdenes de puesto para garantizar una operación segura y organizada.</p>
+
+    <h3>Infraestructura y Vialidades</h3>
+    <p>Nos encargamos del mantenimiento de vialidades internas, incluyendo caminos de concreto, asfalto y empedrados. También gestionamos proyectos de infraestructura como la construcción y mantenimiento de casetas de ingreso y otras edificaciones necesarias para el funcionamiento óptimo del condominio.</p>
+
+    <h3>Atención al Cliente</h3>
+    <p>Contamos con un departamento especializado en la atención a residentes, diseñado para facilitar una comunicación fluida y efectiva. A través de diversos canales, oficina HOA, aplicaciones móviles y portales web, los residentes pueden reportar incidencias, solicitar servicios y mantenerse informados sobre las actividades y proyectos en curso dentro del condominio. Este enfoque integral garantiza una gestión transparente y eficiente, mejorando la experiencia de vida en la comunidad.</p>
+
+    <p>Cada día, nos dedicamos a garantizar que las comunidades que administramos funcionen de manera eficiente, segura y armoniosa. Nuestro equipo trabaja incansablemente para mantener y mejorar cada aspecto del condominio, desde el mantenimiento de áreas comunes y sistemas hidráulicos hasta la implementación de protocolos de seguridad y atención al cliente.</p>
+
+    <p>Entendemos que la administración de un condominio va más allá de las tareas operativas; se trata de crear un entorno donde los residentes se sientan cómodos y orgullosos de su comunidad. Por ello, adoptamos un enfoque proactivo y personalizado, adaptándonos a las necesidades específicas de cada propiedad y sus habitantes.</p>
+
+    <p>Nuestro compromiso es ser más que administradores; aspiramos a ser aliados estratégicos en la construcción de comunidades sostenibles y bien gestionadas. Con una gestión transparente, eficiente y centrada en las personas, trabajamos día a día para superar las expectativas y contribuir al bienestar de todos los residentes.</p>
+
+    <p>Con nuestra experiencia y compromiso, trabajamos día a día para garantizar que cada condominio bajo nuestra administración funcione de manera eficiente, segura y armoniosa. Si deseas más información o requieres una cotización personalizada, no dudes en contactarnos. Estamos aquí para ayudarte a crear y mantener una comunidad donde todos se sientan cómodos y satisfechos.</p>
+
+    <blockquote>“Cada acción diaria construye la confianza que nos distingue.”</blockquote>
+  `,
+      date: "2025-06-17",
+      category: "Administración",
+      excerpt:
+        "Descubre cómo Bahía Connect transforma la administración de condominios con soluciones integrales, sostenibles y enfocadas en el bienestar comunitario.",
+    },
     "potencia-valor-propiedad-consultoria-360": {
       img: "/assets/blog/1.jpg",
       img2: "/assets/blog/1.2.jpg",
@@ -243,7 +288,10 @@ export default function BlogPost({ params }) {
                   {post.title}
                 </h1>
                 <div className="flex items-center text-sm text-white/80 uppercase tracking-wider font-light mb-4">
-                  <a href="/es" className="hover:text-sky-600 transition-colors">
+                  <a
+                    href="/es"
+                    className="hover:text-sky-600 transition-colors"
+                  >
                     Inicio
                   </a>
                   <span className="mx-2">/</span>

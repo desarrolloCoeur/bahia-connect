@@ -7,8 +7,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${post.title} | Bahía Connect Blog`,
     description:
-      post.excerpt ||
-      "Bahía Connect blog article about property management",
+      post.excerpt || "Bahía Connect blog article about property management",
     keywords: `${post.category.toLowerCase()}, property management, Bahía de Banderas, Nayarit, ${post.title
       .toLowerCase()
       .replace(/[^\w\s]/gi, "")
@@ -19,6 +18,51 @@ export async function generateMetadata({ params }) {
 
 const getBlogPost = (slug) => {
   const blogPosts = {
+    "excelencia-administracion-condominios": {
+      img: "/assets/blog/4.jpeg",
+      img2: "/assets/blog/4.2.jpeg",
+      title: "Bahía Connect: Excellence in Condominium Management",
+      content: `
+    <h2>Our Essence</h2>
+    <p>Bahía Connect is a Mexican company specializing in the comprehensive management of residential and hotel condominiums, known for its high level of quality and attention to detail. Our commitment is to offer efficient, personalized solutions that ensure optimal operation while helping maintain the value of the properties we manage.</p>
+
+    <p>We have a multidisciplinary team of highly trained professionals in key areas such as administration, maintenance of common areas, hydraulic and electrical systems, security, infrastructure, and customer service. Our experience allows us to implement and lead operational and financial practices that ensure sustainability and the well-being of the communities we serve.</p>
+
+    <h2>What We Do</h2>
+
+    <h3>Green Area Maintenance</h3>
+    <p>We manage over 18 projects where we coordinate the maintenance of gardens in common areas, adapting to the needs of each property. This includes supervision of specialized landscaping companies or forming multidisciplinary teams with on-site personnel. Our work ranges from regular lawn and shrub trimming to efficient irrigation system automation, fertilization, and proper pest control—preserving landscaping and the overall image year-round.</p>
+
+    <h3>Cleaning and Maintenance of Common Areas</h3>
+    <p>We follow specific protocols and procedures based on certified systems for cleaning and maintaining common areas. The standards in the communities we manage are high and comparable to those in luxury hotels. Our formal approach ensures all common areas are kept in top condition, including hallways, lounges, and shared spaces. This involves regular cleaning, minor repairs, and supervision of lighting and ventilation systems.</p>
+
+    <h3>Hydraulic Systems and Pools</h3>
+    <p>We manage the maintenance of pools in more than 140 residential units and clubhouses, ensuring clean water, proper pH control, and regular inspection of filters and circulation systems. We also handle full maintenance of hydraulic systems, including water distribution networks, irrigation systems, and pumping stations.</p>
+
+    <h3>Security and Access Control</h3>
+    <p>We work with specialized companies to implement effective security systems including CCTV, control centers, and access/emergency protocols. We supervise security personnel—whether internal or outsourced—and develop organizational charts and duty sheets to ensure safe and efficient operations.</p>
+
+    <h3>Infrastructure and Roads</h3>
+    <p>We manage the maintenance of internal roads, including concrete, asphalt, and cobblestone pathways. We also handle infrastructure projects such as the construction and upkeep of entrance booths and other structures essential for the condominium's optimal functioning.</p>
+
+    <h3>Customer Service</h3>
+    <p>We have a specialized department focused on resident care, ensuring smooth and effective communication. Through multiple channels—HOA office, mobile apps, and web portals—residents can report incidents, request services, and stay informed about ongoing activities and projects. This holistic approach ensures transparent and efficient management, enhancing the living experience in the community.</p>
+
+    <p>Every day, we are dedicated to ensuring that the communities we manage operate efficiently, safely, and harmoniously. Our team works tirelessly to maintain and improve every aspect of the condominium—from common areas and hydraulic systems to implementing safety protocols and resident support services.</p>
+
+    <p>We understand that managing a condominium goes beyond operations; it's about creating a place where residents feel comfortable and proud of their community. That's why we take a proactive and personalized approach, adapting to the unique needs of each property and its people.</p>
+
+    <p>Our goal is to be more than administrators—we strive to be strategic partners in building sustainable and well-managed communities. Through transparent, efficient, and people-focused management, we work daily to exceed expectations and contribute to the well-being of all residents.</p>
+
+    <p>With our experience and commitment, we ensure that every condominium under our care operates smoothly, safely, and harmoniously. If you’d like more information or a personalized quote, don’t hesitate to contact us. We’re here to help you build and maintain a community where everyone feels comfortable and satisfied.</p>
+
+    <blockquote>"Each daily action builds the trust that sets us apart."</blockquote>
+  `,
+      date: "2025-06-17",
+      category: "Property Management",
+      excerpt:
+        "Discover how Bahía Connect transforms condominium management with sustainable, comprehensive solutions focused on community well-being.",
+    },
     "potencia-valor-propiedad-consultoria-360": {
       img: "/assets/blog/1.jpg",
       img2: "/assets/blog/1.2.jpg",
@@ -85,7 +129,8 @@ const getBlogPost = (slug) => {
     "clave-rentabilizar-inversion-sin-estres": {
       img: "/assets/blog/3.jpg",
       img2: "/assets/blog/3.2.jpg",
-      title: "Property management: the key to stress-free investment profitability",
+      title:
+        "Property management: the key to stress-free investment profitability",
       content: `
         <p>Owning property in a tourist destination is a privilege but also a great responsibility. Maintenance tasks, vendor coordination, guest relations, and legal aspects can become headaches without proper support. At Bahía Connect, we offer complete property management service with strategic, personalized focus.</p>
         
@@ -241,7 +286,10 @@ export default function BlogPost({ params }) {
                   {post.title}
                 </h1>
                 <div className="flex items-center text-sm text-white/80 uppercase tracking-wider font-light mb-4">
-                  <a href="/en" className="hover:text-sky-600 transition-colors">
+                  <a
+                    href="/en"
+                    className="hover:text-sky-600 transition-colors"
+                  >
                     Home
                   </a>
                   <span className="mx-2">/</span>
@@ -364,7 +412,8 @@ export default function BlogPost({ params }) {
               <div className="col-span-12 md:col-span-8 md:col-start-3 text-center">
                 <div className="h-[2px] w-16 bg-sky-600 mb-8 mx-auto"></div>
                 <p className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-10 max-w-3xl mx-auto">
-                  Our commitment is to provide personalized and professional service
+                  Our commitment is to provide personalized and professional
+                  service
                 </p>
                 <a
                   href="/en/contact"

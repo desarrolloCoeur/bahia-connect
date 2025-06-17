@@ -24,6 +24,16 @@ const Blogs = () => {
   const blogPosts = [
     {
       id: 1,
+      slug: "excelencia-administracion-condominios",
+      title: "Bahía Connect: Excelencia en Administración de Condominios",
+      excerpt:
+        "Administración integral de condominios residenciales y hoteleros con enfoque en calidad, sostenibilidad y atención al detalle.",
+      date: "2025-06-17",
+      category: "Administración",
+      img: "/assets/blog/4.jpeg",
+    },
+    {
+      id: 2,
       slug: "potencia-valor-propiedad-consultoria-360",
       title: "Potencia el valor de tu propiedad con una consultoría 360°",
       excerpt: "Descubre cómo aprovechar al máximo tu propiedad en la costa con nuestra consultoría integral.",
@@ -32,7 +42,7 @@ const Blogs = () => {
       img: "/assets/blog/1.jpg",
     },
     {
-      id: 2,
+      id: 3,
       slug: "administracion-propiedades-inversion-protegida",
       title: "Administración de propiedades: tu inversión protegida todo el año",
       excerpt: "Cómo cuidar tu propiedad en la playa mientras disfrutas de los beneficios.",
@@ -40,15 +50,15 @@ const Blogs = () => {
       category: "Administración",
       img: "/assets/blog/2.jpg",
     },
-    {
-      id: 3,
-      slug: "clave-rentabilizar-inversion-sin-estres",
-      title: "Administración de propiedades: la clave para rentabilizar tu inversión sin estrés",
-      excerpt: "Convierte tu propiedad turística en un activo rentable sin complicaciones.",
-      date: "2025-04-10",
-      category: "Rentabilidad",
-      img: "/assets/blog/3.jpg",
-    },
+    // {
+    //   id: 4,
+    //   slug: "clave-rentabilizar-inversion-sin-estres",
+    //   title: "Administración de propiedades: la clave para rentabilizar tu inversión sin estrés",
+    //   excerpt: "Convierte tu propiedad turística en un activo rentable sin complicaciones.",
+    //   date: "2025-04-10",
+    //   category: "Rentabilidad",
+    //   img: "/assets/blog/3.jpg",
+    // },
   ]
 
   const handlePrev = () => {
