@@ -4,6 +4,11 @@ import {
   Shield,
   Wrench,
   ArrowRight,
+  Droplets,
+  Trees,
+  Users,
+  RouteIcon as Road,
+  Phone,
 } from "lucide-react";
 import Image from "next/image";
 import Contact from "../components/Contact";
@@ -49,7 +54,10 @@ export default function ServicesPage() {
                   Servicios
                 </h1>
                 <div className="flex items-center text-sm text-white/80 uppercase tracking-wider font-light">
-                  <a href="/es" className="hover:text-sky-600 transition-colors">
+                  <a
+                    href="/es"
+                    className="hover:text-sky-600 transition-colors"
+                  >
                     Inicio
                   </a>
                   <span className="mx-2">/</span>
@@ -102,170 +110,316 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services overview section with Swiss design */}
+      {/* Detailed Services section with Swiss design */}
       <section className="w-full bg-white py-24">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-12 gap-8">
+          <div className="grid grid-cols-12 gap-8 mb-16">
             <div className="col-span-12 md:col-span-3 flex items-start">
               <span className="text-6xl font-light text-sky-600 mr-4">02</span>
               <div className="h-[1px] w-full bg-black mt-6"></div>
             </div>
             <div className="col-span-12 md:col-span-9">
               <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-8">
-                Entre los servicios que ofrecemos se incluyen:
+                Servicios Especializados
               </h2>
-              <ul className="space-y-4 max-w-3xl">
-                {[
-                  "Mantenimiento de la propiedad",
-                  "Limpieza diaria",
-                  "Gestión de pagos y administración de la propiedad",
-                  "Suministro de productos de limpieza según requerimientos",
-                  "Inspección semanal de la propiedad con mantenimiento preventivo",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="w-2 h-2 bg-sky-600 mt-2 mr-4 flex-shrink-0"></div>
-                    <span className="text-gray-800 font-light">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Service categories with Swiss design */}
-      <section className="w-full bg-gray-50 py-24">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-12 gap-4 mb-16">
-            <div className="col-span-12 md:col-span-3 flex items-start">
-              <span className="text-6xl font-light text-sky-600 mr-4">03</span>
-              <div className="h-[1px] w-full bg-black mt-6"></div>
-            </div>
-            <div className="col-span-12 md:col-span-9">
-              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-4">
-                Categorías de Servicios
-              </h2>
-              <p className="text-sm uppercase tracking-widest text-gray-600 font-light">
-                Soluciones integrales para su propiedad
+              <p className="text-lg font-light text-gray-600 mb-8">
+                Más que administradores, somos aliados estratégicos.
               </p>
+              <blockquote className="text-xl font-light italic text-sky-800 border-l-2 border-sky-600 pl-6">
+                "Cada acción diaria construye la confianza que nos distingue."
+              </blockquote>
             </div>
           </div>
 
-          <div className="grid grid-cols-12 gap-8">
-            {/* ADMINISTRACIÓN */}
+          {/* Services Grid - Modified to 2 columns */}
+          <div className="grid grid-cols-12 gap-6">
+            {/* Administración Integral */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
-                  <Building2 className="h-6 w-6 text-sky-600 mr-4" />
-                  <h3 className="text-xl font-normal uppercase tracking-wide">
-                    Administración
+                  <Building2 className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
+                  <h3 className="text-lg font-normal uppercase tracking-wide">
+                    Administración Integral de Condominios
                   </h3>
                 </div>
-                <div className="p-8">
-                  <ul className="space-y-4">
-                    {[
-                      "Establecer vínculos profesionales con los propietarios",
-                      "Gestión de la administración y cobranza",
-                      "Control y administración del presupuesto",
-                      "Auditorías administrativas",
-                      "Atención en línea (APP) 24/7",
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-700 font-light">{item}</span>
-                      </li>
-                    ))}
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Gestión profesional de propiedades residenciales y
+                        hoteleras
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Soluciones eficientes y personalizadas
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Enfoque en valorización y óptimo funcionamiento de las
+                        comunidades
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div className="absolute -top-3 -left-3 w-6 h-6 bg-sky-600"></div>
             </div>
 
-            {/* OPERACIÓN */}
+            {/* Mantenimiento de Áreas Verdes */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
-                  <ClipboardCheck className="h-6 w-6 text-sky-600 mr-4" />
-                  <h3 className="text-xl font-normal uppercase tracking-wide">
-                    Operación
+                  <Trees className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
+                  <h3 className="text-lg font-normal uppercase tracking-wide">
+                    Mantenimiento de Áreas Verdes
                   </h3>
                 </div>
-                <div className="p-8">
-                  <ul className="space-y-4">
-                    {[
-                      "Oficina en sitio",
-                      "Inspecciones periódicas para detectar problemas",
-                      "Mantenimiento preventivo y correctivo (plomería, electricidad, pintura, etc.)",
-                      "Gestión de proveedores y contratistas",
-                      "Jardinería y áreas comunes",
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-700 font-light">{item}</span>
-                      </li>
-                    ))}
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Coordinación de jardinería en más de 18 proyectos
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Poda, riego automatizado, fertilización y cuidado del
+                        paisajismo
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Supervisión de empresas especializadas o equipos propios
+                        del condominio
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div className="absolute -top-3 -right-3 w-6 h-6 border border-black"></div>
             </div>
 
-            {/* MANTENIMIENTO */}
+            {/* Limpieza y Conservación */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
-                  <Wrench className="h-6 w-6 text-sky-600 mr-4" />
-                  <h3 className="text-xl font-normal uppercase tracking-wide">
-                    Mantenimiento
+                  <ClipboardCheck className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
+                  <h3 className="text-lg font-normal uppercase tracking-wide">
+                    Limpieza y Conservación de Áreas Comunes
                   </h3>
                 </div>
-                <div className="p-8">
-                  <ul className="space-y-4">
-                    {[
-                      "Preventivo",
-                      "Correctivo",
-                      "Estético",
-                      "Gestión y control del mantenimiento",
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-700 font-light">{item}</span>
-                      </li>
-                    ))}
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Protocolos basados en estándares comparables a hoteles
+                        de lujo
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Mantenimiento diario de pasillos, salones y zonas
+                        compartidas
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Supervisión de iluminación, ventilación y reparaciones
+                        menores
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div className="absolute -bottom-3 -left-3 w-6 h-6 border border-black"></div>
             </div>
 
-            {/* SEGURIDAD */}
+            {/* Sistemas Hidráulicos y Albercas */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
-                  <Shield className="h-6 w-6 text-sky-600 mr-4" />
-                  <h3 className="text-xl font-normal uppercase tracking-wide">
-                    Seguridad
+                  <Droplets className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
+                  <h3 className="text-lg font-normal uppercase tracking-wide">
+                    Sistemas Hidráulicos y Albercas
                   </h3>
                 </div>
-                <div className="p-8">
-                  <ul className="space-y-4">
-                    {[
-                      "Plan integral de seguridad (CCTV)",
-                      "Planes de evacuación",
-                      "Accesos controlados",
-                      "Protocolos para accidentes",
-                      "Seguridad perimetral",
-                      "Regulación del tránsito vehicular dentro del condominio",
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-700 font-light">{item}</span>
-                      </li>
-                    ))}
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Mantenimiento de más de 140 albercas en residenciales y
+                        casas club
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Control de pH, limpieza, filtros y circulación
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Gestión de redes hidráulicas, estaciones de bombeo y
+                        riego
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div className="absolute -bottom-3 -right-3 w-6 h-6 bg-sky-600"></div>
+            </div>
+
+            {/* Seguridad y Control de Acceso */}
+            <div className="col-span-12 md:col-span-6 relative">
+              <div className="border border-black h-full">
+                <div className="p-6 border-b border-black flex items-start">
+                  <Shield className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
+                  <h3 className="text-lg font-normal uppercase tracking-wide">
+                    Seguridad y Control de Acceso
+                  </h3>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Supervisión de personal de seguridad (interno o externo)
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Implementación de sistemas CCTV, controles de acceso y
+                        protocolos de emergencia
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Estructura organizacional y manuales operativos
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="absolute -top-3 -left-3 w-6 h-6 border border-black"></div>
+            </div>
+
+            {/* Infraestructura y Vialidades */}
+            <div className="col-span-12 md:col-span-6 relative">
+              <div className="border border-black h-full">
+                <div className="p-6 border-b border-black flex items-start">
+                  <Road className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
+                  <h3 className="text-lg font-normal uppercase tracking-wide">
+                    Infraestructura y Vialidades
+                  </h3>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Mantenimiento de caminos internos: concreto, asfalto,
+                        empedrado
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Construcción y conservación de casetas y estructuras
+                        clave
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="absolute -top-3 -right-3 w-6 h-6 bg-sky-600"></div>
+            </div>
+
+            {/* Atención al Cliente */}
+            <div className="col-span-12 md:col-span-6 relative">
+              <div className="border border-black h-full">
+                <div className="p-6 border-b border-black flex items-start">
+                  <Phone className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
+                  <h3 className="text-lg font-normal uppercase tracking-wide">
+                    Atención al Cliente y Comunicación
+                  </h3>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Departamento especializado en atención a residentes
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Canales disponibles: oficina HOA, apps móviles y
+                        portales web
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Gestión transparente de reportes, incidencias y
+                        solicitudes
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="absolute -bottom-3 -left-3 w-6 h-6 border border-black"></div>
+            </div>
+
+            {/* Compromiso con la Comunidad */}
+            <div className="col-span-12 md:col-span-6 relative">
+              <div className="border border-black h-full">
+                <div className="p-6 border-b border-black flex items-start">
+                  <Users className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
+                  <h3 className="text-lg font-normal uppercase tracking-wide">
+                    Compromiso con la Comunidad
+                  </h3>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Gestión eficiente, segura y armoniosa
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Enfoque proactivo y adaptado a cada condominio
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light">
+                        Construcción de comunidades sostenibles y bien
+                        gestionadas
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="absolute -bottom-3 -right-3 w-6 h-6 border border-black"></div>
             </div>
           </div>
         </div>
