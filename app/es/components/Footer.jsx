@@ -20,9 +20,9 @@ const Footer = () => {
         <div className="grid grid-cols-12 gap-8">
           {/* Logo column */}
           <div className="col-span-12 md:col-span-4 relative">
-            <div className="relative h-[120px] w-[220px]">
+            <div className="relative h-[140px] w-[240px] invert">
               <Image
-                src="/assets/logo-white.png"
+                src="/logo-negro.png"
                 alt="Bahía Connect"
                 fill
                 className="object-contain object-left"

@@ -195,9 +195,9 @@ export default function Home() {
             {/* Content area */}
             <div className="col-span-12 md:col-span-8">              
               <div className="mb-12 relative">
-                <div className="w-[180px] h-[180px] relative mx-auto md:mx-0">
+                <div className="w-[330px] h-[330px] relative mx-auto md:mx-0 invert">
                   <Image
-                    src="/assets/logo-navbar2.png"
+                    src="/logo-negro.png"
                     alt="Logo"
                     fill
                     className="object-contain"
