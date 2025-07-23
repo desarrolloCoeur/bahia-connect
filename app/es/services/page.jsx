@@ -395,7 +395,7 @@ export default function ServicesPage() {
                   Administración inteligente de propiedades para tu condominio
                 </p>
                 <a
-                  href="/es/contacto"
+                  href="/es/contact"
                   className="inline-flex items-center border border-white px-8 py-3 text-white uppercase hover:bg-sky-600 hover:border-sky-600 transition-colors group"
                 >
                   <span className="mr-2">Solicitar información</span>
