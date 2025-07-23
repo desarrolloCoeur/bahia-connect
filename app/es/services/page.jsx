@@ -2,38 +2,30 @@ import {
   Building2,
   ClipboardCheck,
   Shield,
-  Wrench,
   ArrowRight,
   Droplets,
   Trees,
   Users,
   RouteIcon as Road,
   Phone,
-} from "lucide-react";
-import Image from "next/image";
-import Contact from "../components/Contact";
+} from "lucide-react"
+import Image from "next/image"
+import Contact from "../components/Contact"
 
 export const metadata = {
-  title:
-    "Servicios | Bahía Connect - Administración y Mantenimiento de Propiedades",
+  title: "Servicios | Bahía Connect - Administración y Mantenimiento de Propiedades",
   description:
-    "Servicios profesionales de administración, operación, mantenimiento y seguridad para condominios y propiedades en Bahía de Banderas. Soluciones integrales para propietarios e inversionistas.",
+    "Servicios profesionales de administración de propiedades, operación, mantenimiento y seguridad para condominios y propiedades en Bahía de Banderas. Soluciones integrales para propietarios e inversionistas.",
   keywords:
-    "administración de propiedades, mantenimiento de condominios, seguridad inmobiliaria, operación de condominios, gestión de áreas comunes, servicios para propietarios, Bahía de Banderas, Nayarit, Punta Mita, servicios inmobiliarios",
-};
+    "administración de propiedades, mantenimiento de condominios, seguridad de propiedades, operaciones de condominios, gestión de áreas comunes, servicios a propietarios, Bahía de Banderas, Nayarit, Punta Mita, servicios inmobiliarios",
+}
 
 export default function ServicesPage() {
   return (
     <main>
       {/* Hero section with Swiss design */}
       <div className="relative h-[500px] w-full overflow-hidden">
-        <Image
-          src="/assets/image2.jpg"
-          alt="Servicios"
-          fill
-          className="object-cover grayscale-[70%]"
-          priority
-        />
+        <Image src="/assets/image2.jpg" alt="Servicios" fill className="object-cover grayscale-[70%]" priority />
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Swiss design grid overlay */}
@@ -54,10 +46,7 @@ export default function ServicesPage() {
                   Servicios
                 </h1>
                 <div className="flex items-center text-sm text-white/80 uppercase tracking-wider font-light">
-                  <a
-                    href="/es"
-                    className="hover:text-sky-600 transition-colors"
-                  >
+                  <a href="/es" className="hover:text-sky-600 transition-colors">
                     Inicio
                   </a>
                   <span className="mx-2">/</span>
@@ -81,36 +70,29 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* Nuestros Servicios section with Swiss design */}
+      {/* Our Services section with Swiss design */}
       <section className="w-full bg-sky-800 text-white py-24">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-7 md:col-start-1">
               <div className="flex items-start mb-6">
-                <span className="text-6xl font-light text-sky-600 mr-4">
-                  01
-                </span>
+                <span className="text-6xl font-light text-sky-600 mr-4">01</span>
                 <div className="h-[1px] w-full bg-white mt-6"></div>
               </div>
-              <h2 className="text-3xl font-light tracking-tight uppercase mb-8">
-                Nuestros Servicios
-              </h2>
+              <h2 className="text-3xl font-light tracking-tight uppercase mb-8">Nuestros Servicios</h2>
               <div className="absolute -bottom-4 -left-4 w-16 h-16 border border-sky-600 hidden md:block"></div>
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-lg font-light leading-relaxed">
-                Con más de 23 años en el sector de la región de Bahía de
-                Banderas, hemos gestionado con éxito múltiples proyectos de gran
-                escala, desde Punta Mita y sus alrededores hasta Costa Norte de
-                Nayarit, Sierra Madre y Costa Alegre de Jalisco, siempre
-                enfocándonos en los resultados.
+                Con más de 23 años en la región de Bahía de Banderas, hemos gestionado exitosamente múltiples proyectos
+                de gran escala, desde Punta Mita y sus alrededores hasta la Costa Norte de Nayarit, Sierra Madre y Costa
+                Alegre en Jalisco, siempre enfocados en resultados.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Detailed Services section with Swiss design */}
       <section className="w-full bg-white py-24">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-12 gap-8 mb-16">
@@ -119,9 +101,7 @@ export default function ServicesPage() {
               <div className="h-[1px] w-full bg-black mt-6"></div>
             </div>
             <div className="col-span-12 md:col-span-9">
-              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-8">
-                Servicios Especializados
-              </h2>
+              <h2 className="text-3xl font-light tracking-tight text-black uppercase mb-8">Servicios Especializados</h2>
               <p className="text-lg font-light text-gray-600 mb-8">
                 Más que administradores, somos aliados estratégicos.
               </p>
@@ -131,9 +111,9 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Services Grid - Modified to 2 columns */}
+          {/* Services Grid */}
           <div className="grid grid-cols-12 gap-6">
-            {/* Administración Integral */}
+            {/* Comprehensive Management */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
@@ -147,21 +127,14 @@ export default function ServicesPage() {
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Gestión profesional de propiedades residenciales y
+                        Soluciones integrales para la gestión eficiente de áreas comunes en proyectos residenciales y
                         hoteleras
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Soluciones eficientes y personalizadas
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-700 font-light">
-                        Enfoque en valorización y óptimo funcionamiento de las
-                        comunidades
+                        Comprometidos con el crecimiento del valor y la operatividad eficiente de cada comunidad
                       </span>
                     </li>
                   </ul>
@@ -170,35 +143,31 @@ export default function ServicesPage() {
               <div className="absolute -top-3 -left-3 w-6 h-6 bg-sky-600"></div>
             </div>
 
-            {/* Mantenimiento de Áreas Verdes */}
+            {/* Green Area Maintenance */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <Trees className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
-                  <h3 className="text-lg font-normal uppercase tracking-wide">
-                    Mantenimiento de Áreas Verdes
-                  </h3>
+                  <h3 className="text-lg font-normal uppercase tracking-wide">Mantenimiento de Áreas Verdes</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Coordinación de jardinería en más de 18 proyectos
+                        Coordinamos servicios de jardinería con empresas especializadas o conformamos equipos internos
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Poda, riego automatizado, fertilización y cuidado del
-                        paisajismo
+                        Soluciones completas en jardinería, poda profesional, fertilización oportuna y riego eficiente
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Supervisión de empresas especializadas o equipos propios
-                        del condominio
+                        Supervisión para garantizar resultados de alta calidad y cuidado del diseño paisajístico
                       </span>
                     </li>
                   </ul>
@@ -207,7 +176,7 @@ export default function ServicesPage() {
               <div className="absolute -top-3 -right-3 w-6 h-6 border border-black"></div>
             </div>
 
-            {/* Limpieza y Conservación */}
+            {/* Cleaning and Conservation */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
@@ -221,22 +190,19 @@ export default function ServicesPage() {
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Protocolos basados en estándares comparables a hoteles
-                        de lujo
+                        Protocolos basados en estándares comparables a hoteles de lujo (Certificación Cristal)
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Mantenimiento diario de pasillos, salones y zonas
-                        compartidas
+                        Limpieza y conservación diaria de pasillos, áreas comunes y espacios sociales
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Supervisión de iluminación, ventilación y reparaciones
-                        menores
+                        Supervisión de iluminación, ventilación y reparaciones menores de manera periódica
                       </span>
                     </li>
                   </ul>
@@ -245,35 +211,31 @@ export default function ServicesPage() {
               <div className="absolute -bottom-3 -left-3 w-6 h-6 border border-black"></div>
             </div>
 
-            {/* Sistemas Hidráulicos y Albercas */}
+            {/* Hydraulic Systems and Pools */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <Droplets className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
-                  <h3 className="text-lg font-normal uppercase tracking-wide">
-                    Sistemas Hidráulicos y Albercas
-                  </h3>
+                  <h3 className="text-lg font-normal uppercase tracking-wide">Sistemas Hidráulicos y Albercas</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Mantenimiento de más de 140 albercas en residenciales y
-                        casas club
+                        Actualmente damos mantenimiento a más de 150 albercas en unidades residenciales y casas club
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Control de pH, limpieza, filtros y circulación
+                        Supervisión integral del pH, limpieza eficiente, cuidado de filtros y circulación adecuada
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Gestión de redes hidráulicas, estaciones de bombeo y
-                        riego
+                        Gestión especializada de infraestructura hidráulica, estaciones de bombeo y riego automatizado
                       </span>
                     </li>
                   </ul>
@@ -282,35 +244,30 @@ export default function ServicesPage() {
               <div className="absolute -bottom-3 -right-3 w-6 h-6 bg-sky-600"></div>
             </div>
 
-            {/* Seguridad y Control de Acceso */}
+            {/* Security and Access Control */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <Shield className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
-                  <h3 className="text-lg font-normal uppercase tracking-wide">
-                    Seguridad y Control de Acceso
-                  </h3>
+                  <h3 className="text-lg font-normal uppercase tracking-wide">Seguridad y Control de Acceso</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Supervisión de personal de seguridad (interno o externo)
+                        Gestión efectiva del personal de seguridad, tanto propio como de empresas externas
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Implementación de sistemas CCTV, controles de acceso y
-                        protocolos de emergencia
+                        Implementación de sistemas CCTV, controles de acceso y protocolos de emergencia
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-700 font-light">
-                        Estructura organizacional y manuales operativos
-                      </span>
+                      <span className="text-gray-700 font-light">Estructura organizacional y manuales operativos</span>
                     </li>
                   </ul>
                 </div>
@@ -318,29 +275,25 @@ export default function ServicesPage() {
               <div className="absolute -top-3 -left-3 w-6 h-6 border border-black"></div>
             </div>
 
-            {/* Infraestructura y Vialidades */}
+            {/* Infrastructure and Roads */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <Road className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
-                  <h3 className="text-lg font-normal uppercase tracking-wide">
-                    Infraestructura y Vialidades
-                  </h3>
+                  <h3 className="text-lg font-normal uppercase tracking-wide">Infraestructura y Vialidades</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Mantenimiento de caminos internos: concreto, asfalto,
-                        empedrado
+                        Conservación y reparación de caminos internos en concreto, asfalto y empedrado
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Construcción y conservación de casetas y estructuras
-                        clave
+                        Construcción y cuidado especializado de casetas y edificaciones esenciales en áreas estratégicas
                       </span>
                     </li>
                   </ul>
@@ -349,35 +302,32 @@ export default function ServicesPage() {
               <div className="absolute -top-3 -right-3 w-6 h-6 bg-sky-600"></div>
             </div>
 
-            {/* Atención al Cliente */}
+            {/* Customer Service */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <Phone className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
-                  <h3 className="text-lg font-normal uppercase tracking-wide">
-                    Atención al Cliente y Comunicación
-                  </h3>
+                  <h3 className="text-lg font-normal uppercase tracking-wide">Atención al Cliente y Comunicación</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Departamento especializado en atención a residentes
+                        Departamento enfocado en brindar atención especializada y soluciones a los residentes
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Canales disponibles: oficina HOA, apps móviles y
-                        portales web
+                        Canales disponibles: oficina de atención a clientes y administración, apps móviles y portales
+                        web
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Gestión transparente de reportes, incidencias y
-                        solicitudes
+                        Administración clara y accesible de reportes, incidencias y solicitudes
                       </span>
                     </li>
                   </ul>
@@ -386,34 +336,32 @@ export default function ServicesPage() {
               <div className="absolute -bottom-3 -left-3 w-6 h-6 border border-black"></div>
             </div>
 
-            {/* Compromiso con la Comunidad */}
+            {/* Community Commitment */}
             <div className="col-span-12 md:col-span-6 relative">
               <div className="border border-black h-full">
                 <div className="p-6 border-b border-black flex items-start">
                   <Users className="h-6 w-6 text-sky-600 mr-4 flex-shrink-0" />
-                  <h3 className="text-lg font-normal uppercase tracking-wide">
-                    Compromiso con la Comunidad
-                  </h3>
+                  <h3 className="text-lg font-normal uppercase tracking-wide">Compromiso con la Comunidad</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Gestión eficiente, segura y armoniosa
+                        Impulsamos una gestión responsable que garantiza eficiencia, seguridad y armonía en la comunidad
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Enfoque proactivo y adaptado a cada condominio
+                        Estrategia dinámica y personalizada, diseñada para satisfacer las necesidades específicas de
+                        cada condominio
                       </span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-sky-600 mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-gray-700 font-light">
-                        Construcción de comunidades sostenibles y bien
-                        gestionadas
+                        Desarrollo de comunidades responsables, sostenibles y con una gestión eficiente
                       </span>
                     </li>
                   </ul>
@@ -427,13 +375,7 @@ export default function ServicesPage() {
 
       {/* CTA section with Swiss design */}
       <section className="w-full relative h-[60vh] overflow-hidden">
-        <Image
-          src="/assets/image4.jpg"
-          alt="Servicios"
-          fill
-          className="object-cover grayscale-[70%]"
-          priority
-        />
+        <Image src="/assets/image4.jpg" alt="Servicios" fill className="object-cover grayscale-[70%]" priority />
         <div className="absolute inset-0 bg-black/70"></div>
 
         {/* Swiss design grid overlay */}
@@ -450,10 +392,10 @@ export default function ServicesPage() {
               <div className="col-span-12 md:col-span-8 md:col-start-3 text-center">
                 <div className="h-[2px] w-16 bg-sky-600 mb-8 mx-auto"></div>
                 <p className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-10 max-w-3xl mx-auto">
-                  Gestión inmobiliaria inteligente para tu condominio
+                  Administración inteligente de propiedades para tu condominio
                 </p>
                 <a
-                  href="/es/contact"
+                  href="/es/contacto"
                   className="inline-flex items-center border border-white px-8 py-3 text-white uppercase hover:bg-sky-600 hover:border-sky-600 transition-colors group"
                 >
                   <span className="mr-2">Solicitar información</span>
@@ -480,5 +422,5 @@ export default function ServicesPage() {
       {/* Contact section */}
       <Contact />
     </main>
-  );
+  )
 }
